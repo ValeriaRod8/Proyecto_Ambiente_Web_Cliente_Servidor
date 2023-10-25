@@ -162,8 +162,10 @@
     </footer>
 
     <?php
-        include("send.php");   
-        ?>
+        //include("send.php");
+        require_once 'DAL/consulta.php';
+        testConectar();
+    ?>
 
     <script>
         function myFuntion() {
