@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
             <a href="#" class="logo">Logo</a>
             <input type="checkbox" id="menu" />
             <label for="menu">
-                <img src="imagenes/menu.png" class="menu-img" alt="menu">
+                <img src="assets/img/menu.png" class="menu-img" alt="menu">
             </label>
             <nav class="navbar">
                 <ul>
@@ -43,7 +43,7 @@
                 <a href="#" class="btn-1">Informacion</a>
             </div>
             <div class="header-img">
-                <img src="imagenes/left.png" alt="">
+                <img src="assets/img/left.png" alt="">
             </div>
         </div>
     </header>
@@ -52,7 +52,7 @@
     <section class="about container">
 
         <div class="about-img">
-            <img src="imagenes/about.png" alt="">
+            <img src="assets/img/about.png" alt="">
         </div>
         <div class="about-txt">
             <h2>¿Quienes Somos?</h2>
