@@ -1,0 +1,19 @@
+.section__container {
+    margin: 5rem;
+}
+
+.section__h2 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.section__description {
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: justify;
+}
+
+.equipo__container {
+    display: flex;
+    margin: 5rem;
+}

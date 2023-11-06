@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preload" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/servicio.css">
 </head>
 
 <body>
@@ -86,50 +87,30 @@
     </section>
 
 
-    <main class="Servicios" style="background-color: #fafafa; height: 260px" >
+    <main class="Servicios" style="background-color: #fafafa; height: 260px">
 
         <h2> Servicios </h2>
-        <div class="servicios-content-container">
+        <?php
+        include_once 'include/templates/template-servicios.php'
+        ?>
 
-            <div class="servicio-1">
-                <i class="fa-sharp fa-solid fa-hospital-user"></i>
-                <h3>Pediatría</h3>
-            </div>
-
-            <div class="servicio-2">
-                <i class="fa-solid fa-bed pulse"></i>
-                <h3>Demartología</h3>
-            </div>
-
-            <div class="servicio-3">
-                <i class="fa-sharp fa-solid fa-hospital"></i>
-                <h3>Cardiología</h3>
-            </div>
-
-            <div class="servicio-4">
-                <i class="fa-sharp fa-solid fa-stethoscope"></i>
-                <h3>Ginecología</h3>
-            </div>
-
-        </div>
     </main>
-
 
     <section class="Formulario container" style="margin-top: 50px;">
         <form method="post" autocomplete="off">
             <h2> Agenda Consulta</h2>
             <div class="input-group">
                 <div class="input-container">
+                    <i class="form__icon fa-solid fa-user"></i>
                     <input type="text" name="name" placeholder="Nombre y Apellido">
-                    <i class="fa-solid fa-user"></i>
                 </div>
                 <div class="input-container">
+                    <i class="form__icon fa-solid fa-phone"></i>
                     <input type="tel" name="phone" placeholder="Telefono Celular">
-                    <i class="fa-solid fa-phone"></i>
                 </div>
                 <div class="input-container">
+                    <i class="form__icon fa-solid fa-envelope"></i>
                     <input type="email" name="email" placeholder="Correo">
-                    <i class="fa-solid fa-envelope"></i>
                 </div>
                 <div class="input-container">
                     <textarea name="message" placeholder="Detalles de la Consulta"></textarea>
@@ -142,7 +123,7 @@
     </section>
 
     <footer class="footer" style="background-color: #fafafa; height: 260px">
-        <div class="footer-content-container">
+        <!--         <div class="footer-content-container">
 
             <div class="link">
                 <a href="#" class="logo">logo</a>
@@ -157,20 +138,21 @@
                 </ul>
             </div>
 
-        </div>
+        </div> -->
 
     </footer>
 
     <?php
-        //include("send.php");
-        require_once 'DAL/consulta.php';
-        testConectar();
+    //include("send.php");
+    /* require_once 'DAL/consulta.php';
+    testConectar(); */
     ?>
 
     <script>
         function myFuntion() {
             window.location.href = "https://localhost/Pagina Web";
-        }</script>
+        }
+    </script>
 
 </body>
 
