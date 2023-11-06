@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Staatliches&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
     text-decoration: none;
     list-style: none;
 }
 
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem = 10 px */
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -108,11 +113,12 @@ menu label {
 }
 
 .btn-1 {
+    font-size: 2rem;
     display: inline-block;
-    padding: 11px 25px;
+    padding: 1rem 2.5rem;
     background-color: #02b1f4;
     color: #FFFFFF;
-    border-radius: 15px;
+    border-radius: 1.5rem;
 }
 
 
@@ -128,7 +134,7 @@ menu label {
     transition: transform 0.3s;
 }
 
-.about-img:hover{
+.about-img:hover {
     transform: scale(1.1);
 }
 
@@ -155,109 +161,148 @@ menu label {
 
 /* Servicios */
 
-h2{
+h2 {
     text-align: center;
     font-size: 50px;
 }
 
-h3{
+h3 {
     font-size: 25px;
-    text-align: center;  
+    text-align: center;
+    margin: 0;
 }
 
-.servicios-content-container{
+.servicios-content-container {
     display: flex;
+    justify-content: space-evenly;
     margin: 20px;
-    margin-left: 0%;
 }
 
-.Servicios i{
-    margin-top: 10px;
-    margin-left: 95px;
+.Servicios i {
     font-size: 50px;
     color: #02B1F4;
 }
 
-.servicio-1, .servicio-2, .servicio-3, .servicio-4 {
+.servicio-1,
+.servicio-2,
+.servicio-3,
+.servicio-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     width: 250px;
-    height: 100px;
+    height: 125px;
     border: 1px solid gray;
     border-radius: 10px;
-    margin-left: 100px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
-  }
-  
-  .servicio-1:hover, .servicio-2:hover, .servicio-3:hover, .servicio-4:hover {
-    transform: scale(1.1); 
-  }
+}
+
+.servicio-1:hover,
+.servicio-2:hover,
+.servicio-3:hover,
+.servicio-4:hover {
+    transform: scale(1.1);
+}
 
 /* Formulario*/
-   
+
 form {
-    width: 600px; /* Ajusta el ancho según tus necesidades */
+    width: 600px;
+    /* Ajusta el ancho según tus necesidades */
     margin: 0 auto;
-    background-color: #fff; /* Fondo blanco */
-    padding: 20px;
+    background-color: #fff;
+    /* Fondo blanco */
+    padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    margin-bottom: 50px;
-  }
-  
-  form h2 {
-    color: #02B1F4; /* Texto azul */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    margin-bottom: 5rem;
+}
+
+form h2 {
+    color: #02B1F4;
+    /* Texto azul */
     text-align: center;
-  }
-  
-  .input-container {
-    margin-bottom: 10px;
-  }
-  
-  .input-container input, .input-container textarea {
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 1rem;
+
+}
+
+.input-container input,
+.input-container textarea {
+    font-size: 2rem;
     width: 100%;
-    padding: 10px;
-    border: 1px solid #02B1F4; /* Borde azul */
+    padding: 1rem;
+    border: 1px solid #02B1F4;
+    /* Borde azul */
     border-radius: 10px;
     background-color: #fff;
-  }
-  
-  .input-container input::placeholder, .input-container textarea::placeholder {
-    color: #02B1F4; /* Color de texto del marcador de posición azul */
-  }
-  
-  .btn {
-    background-color: #02B1F4; /* Fondo azul para el botón */
-    color: #fff; /* Texto blanco */
+}
+
+.input-container input {
+    padding-left: 40px;
+}
+
+.input-container textarea {
+    height: 150px;
+    resize: none;
+}
+
+.input-container input::placeholder,
+.input-container textarea::placeholder {
+    color: #02B1F4;
+    /* Color de texto del marcador de posición azul */
+}
+
+.btn {
+    font-size: 2rem;
+    background-color: #02B1F4;
+    /* Fondo azul para el botón */
+    color: #fff;
+    /* Texto blanco */
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     cursor: pointer;
     display: block;
-    margin: 10px 0;
-  }
-  
-  .btn:hover {
-    background-color: #0263b1; /* Cambia el color de fondo al hacer hover */
-  }
-  
-  /* Agrega estilos específicos para el icono si es necesario */
-  .fa-solid {
-    color: #02B1F4; /* Color azul para los íconos */
-    margin-right: 5px; /* Espacio entre el ícono y el campo de entrada */
-  }
-  
-  /* footer*/
+    margin: 1rem 0;
+}
 
-  .link ul {
-    font-size: 30px;
+.btn:hover {
+    background-color: #0263b1;
+    /* Cambia el color de fondo al hacer hover */
+}
+
+.form__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 15px;
+}
+
+/* Agrega estilos específicos para el icono si es necesario */
+.fa-solid {
+    font-size: 1.5rem;
+    color: #02B1F4;
+    /* Color azul para los íconos */
+}
+
+/* footer*/
+
+.link ul {
+    font-size: 3rem;
     list-style: none;
     display: flex;
     justify-content: space-between;
     margin-left: 10%;
     padding: 0;
-  }
-  
-  .link ul li {
-    margin-right: 18%; 
-  }
-  
+}
+
+.link ul li {
+    margin-right: 18%;
+}
