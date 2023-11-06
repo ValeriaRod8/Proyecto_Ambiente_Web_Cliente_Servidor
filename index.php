@@ -97,25 +97,25 @@
     </main>
 
     <section class="Formulario container" style="margin-top: 50px;">
-        <form method="post" autocomplete="off">
+        <form method="post" action="send.php" autocomplete="off">
             <h2> Agenda Consulta</h2>
             <div class="input-group">
                 <div class="input-container">
                     <i class="form__icon fa-solid fa-user"></i>
-                    <input type="text" name="name" placeholder="Nombre y Apellido">
+                    <input type="text" name="name" placeholder="Nombre y Apellido" required>
                 </div>
                 <div class="input-container">
                     <i class="form__icon fa-solid fa-phone"></i>
-                    <input type="tel" name="phone" placeholder="Telefono Celular">
+                    <input type="tel" name="phone" placeholder="Telefono Celular" required>
                 </div>
                 <div class="input-container">
                     <i class="form__icon fa-solid fa-envelope"></i>
-                    <input type="email" name="email" placeholder="Correo">
+                    <input type="email" name="email" placeholder="Correo" required>
                 </div>
                 <div class="input-container">
-                    <textarea name="message" placeholder="Detalles de la Consulta"></textarea>
+                    <textarea name="message" placeholder="Detalles de la Consulta" required></textarea>
                 </div>
-                <input type="submit" name="send" class="btn" onClick="myFuntion()">
+                <input type="submit" name="send" class="btn">
 
             </div>
 
