@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Staatliches&display=swap');
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem = 10 px */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #fafafa;
+    padding: 150px 0 100px 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #323232;
+    display: block;
+
+}
+
+.menu .navbar ul li a:hover {
+    color: #02b1f4;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #02B1F4;
+    text-transform: uppercase;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    display: flex;
+}
+
+.header-txt {
+    width: 50%;
+}
+
+.header-txt h1 {
+    line-height: 1;
+    color: #323232;
+    text-transform: uppercase;
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+
+.header-txt p {
+    font-size: 16px;
+    color: #818181;
+    margin-bottom: 45px;
+}
+
+.header-img {
+    width: 35%;
+    margin-top: -20px;
+    margin-left: 100px;
+}
+
+.btn-1 {
+    font-size: 2rem;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: #02b1f4;
+    color: #FFFFFF;
+    border-radius: 1.5rem;
+}
+
+
+.about {
+    padding: 100px 0;
+    display: flex;
+}
+
+.about-img {
+    width: 350%;
+    margin-right: 60px;
+    margin-top: 100px;
+    transition: transform 0.3s;
+}
+
+.about-img:hover {
+    transform: scale(1.1);
+}
+
+.about_img img {
+    width: 500%;
+    border-radius: 15px;
+}
+
+.about_txt {
+    width: 50%;
+    margin-left: 25px;
+}
+
+.about-txt h2 {
+    color: #323232;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.about-txt p {
+    font-size: 16px;
+    color: #818181;
+}
+
+/* Servicios */
+
+h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+}
+
+.servicios-content-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.Servicios i {
+    font-size: 50px;
+    color: #02B1F4;
+}
+
+.servicio-1,
+.servicio-2,
+.servicio-3,
+.servicio-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 250px;
+    height: 125px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.servicio-1:hover,
+.servicio-2:hover,
+.servicio-3:hover,
+.servicio-4:hover {
+    transform: scale(1.1);
+}
+
+/* Formulario*/
+
+form {
+    width: 600px;
+    /* Ajusta el ancho según tus necesidades */
+    margin: 0 auto;
+    background-color: #fff;
+    /* Fondo blanco */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    margin-bottom: 5rem;
+}
+
+form h2 {
+    color: #02B1F4;
+    /* Texto azul */
+    text-align: center;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 1rem;
+
+}
+
+.input-container input,
+.input-container textarea {
+    font-size: 2rem;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #02B1F4;
+    /* Borde azul */
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.input-container input {
+    padding-left: 40px;
+}
+
+.input-container textarea {
+    height: 150px;
+    resize: none;
+}
+
+.input-container input::placeholder,
+.input-container textarea::placeholder {
+    color: #02B1F4;
+    /* Color de texto del marcador de posición azul */
+}
+
+.btn {
+    font-size: 2rem;
+    background-color: #02B1F4;
+    /* Fondo azul para el botón */
+    color: #fff;
+    /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    display: block;
+    margin: 1rem 0;
+}
+
+.btn:hover {
+    background-color: #0263b1;
+    /* Cambia el color de fondo al hacer hover */
+}
+
+.form__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 15px;
+}
+
+/* Agrega estilos específicos para el icono si es necesario */
+.fa-solid {
+    font-size: 1.5rem;
+    color: #02B1F4;
+    /* Color azul para los íconos */
+}
+
+/* footer*/
+
+.link ul {
+    font-size: 3rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    padding: 0;
+}
+
+.link ul li {
+    margin-right: 18%;
+}
+
+
+/* NOSOTROS */
+
+.header-nosotros {
+    padding: 0px 0 100px 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.nosotros-txt {
+    width: 110%;
+}
+
+.nosotros-txt h1 {
+    line-height: 1;
+    color: #323232;
+    text-transform: uppercase;
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+
+.nosotros-txt p {
+    font-size: 16px;
+    color: #818181;
+    margin-bottom: 45px;
+}
+
+.contenedor-general {
+    margin: 20px; /* Ajusta el margen según tus necesidades */
+}
+
+.nosotros-content {
+    margin-bottom: 20px; /* Ajusta el margen inferior para separar las secciones */
+}
+
+
+.mapa-cuadro {
+    background-color: #e0e0e0; /* Color de fondo del cuadro */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centra el contenido del cuadro */
+    margin: 0 auto; /* Añade margen automático para centrar el cuadro horizontalmente */
+    width: 50%; /* Ajusta el ancho del cuadro según tus necesidades */
+}
+
+.mapa-cuadro a {
+    text-decoration: none;
+    color: #333; /* Color del texto del enlace */
+    font-weight: bold;
+}
+
+.imagen-cuadro {
+    overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para efecto de elevación */
+}
+
+.imagen-cuadro img {
+    width: 100%; /* La imagen ocupa el 100% del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto original */
+}
+
+/* SERVICIOS */
+
+.header-servicios {
+    padding: 0px 0 100px 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.servicios-txt {
+    width: 100%;
+}
+
+.servicios-txt h1 {
+    line-height: 1;
+    color: #323232;
+    text-transform: uppercase;
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+
+.servicios-txt p {
+    font-size: 16px;
+    color: #818181;
+    margin-bottom: 45px;
+}
+
+.contenedor-general {
+    margin: 20px; /* Ajusta el margen según tus necesidades */
+}
+
+.servicios-content {
+    margin-bottom: 20px; /* Ajusta el margen inferior para separar las secciones */
+}
+
+.cuadro-izquierdo {
+    flex: 0 0 48%; /* Establece el ancho del cuadro izquierdo */
+    background-color: #e0e0e0; /* Color de fondo del cuadro izquierdo */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+}
