@@ -14,7 +14,7 @@
 <body>
 
 
-    <header class="header">
+    <header class="header-nosotros">
 
         <div class="menu container">
             <a href="#" class="logo">Logo</a>
@@ -24,69 +24,47 @@
             </label>
             <nav class="navbar">
                 <ul>
-                <li><a href="index.php" style="font-weight: bold;">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                 <li><a href="nosotros.php">Nosotros</a></li>
                 <li><a href="servicios_pediatria.php">Servicios</a></li>
-                <li><a href="contacto.php">Contacto</a></li>
+                <li><a href="contacto.php" style="font-weight: bold;">Contacto</a></li>
                 </ul>
             </nav>
-        </div>
-
-        <div class="header-content container">
-            <div class="header-txt">
-                <h1>Consultorio Medical</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo
-                    veritatis id quis mollitia quas
-                    qui deserunt harum, nisi ratione odit repellat eum!
-                </p>
-                <a href="nosotros.php" class="btn-1">Informacion</a>
-            </div>
-            <div class="header-img">
-                <img src="assets/img/left.png" alt="">
-            </div>
         </div>
     </header>
 
 
-    <section class="about container">
+    <form action="#" method="post">
+    <h2 style="text-align: left; color: black; font-weight: bold;">Contactenos</h2>
 
-        <div class="about-img">
-            <img src="assets/img/about.png" alt="">
-        </div>
-        <div class="about-txt">
-            <h2>¿Quienes Somos?</h2>
-            <p> psum dolor sit amet consectetur adipisicing elit.
-                Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia
-                quas qui deserunt harum,
-                nisi ratione odit repellat eum!
-                orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia
-                quas qui deserunt harum,
-                nisi ratione odit repellat eum!
-            </p>
-            <br>
-            <p>ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia
-                quas qui deserunt harum,
-                nisi ratione odit repellat eum!
-                orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia
-                quas qui deserunt harum,
-                nisi ratione odit repellat eum!
+    <label for="nombre" style="display: block; margin-bottom: 10px; width: 100%; font-weight: bold; font-size: 18px;">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required style="width: 100%; margin-bottom: 20px; padding: 5px; font-size: 16px;">
 
-                PRUEBA DE GITHUB
-            </p>
-        </div>
+    <label for="telefono" style="display: block; margin-bottom: 10px; width: 100%; font-weight: bold; font-size: 18px;">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required style="width: 100%; margin-bottom: 20px; padding: 5px; font-size: 16px;">
 
-    </section>
+    <label for="correo" style="display: block; margin-bottom: 10px; width: 100%; font-weight: bold; font-size: 18px;">Correo:</label>
+    <input type="email" id="correo" name="correo" required style="width: 100%; margin-bottom: 20px; padding: 5px; font-size: 16px;">
+
+    <label for="mensaje" style="display: block; margin-bottom: 10px; width: 100%; font-weight: bold; font-size: 18px;">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" required style="width: 100%; margin-bottom: 20px; padding: 5px; font-size: 16px;"></textarea>
+
+    <div style="text-align: center;">
+        <button type="submit" style="font-weight: bold; font-size: 18px;">Contactar</button>
+    </div>
+</form>
 
 
-    <main class="Servicios" style="background-color: #fafafa; height: 260px">
+
+
+
+
+
+
+
+
+
+    <main class="Servicios" style="height: 260px">
 
         <h2> Servicios </h2>
         <?php
@@ -95,6 +73,7 @@
 
     </main>
 
+    
     <section class="Formulario container" style="margin-top: 50px;">
         <form method="post" action="send.php" autocomplete="off">
             <h2> Agenda Consulta</h2>
@@ -121,6 +100,7 @@
         </form>
     </section>
 
+
     <footer class="footer" style="background-color: #fafafa; height: 260px">
         <!--         <div class="footer-content-container">
 
@@ -146,6 +126,7 @@
     /* require_once 'DAL/consulta.php';
     testConectar(); */
     ?>
+   
 
     <script>
         function myFuntion() {

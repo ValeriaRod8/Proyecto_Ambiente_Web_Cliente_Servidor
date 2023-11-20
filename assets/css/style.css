@@ -16,6 +16,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 img {
@@ -35,6 +37,7 @@ img {
     align-items: center;
 
 }
+
 
 .menu {
     position: absolute;
@@ -305,4 +308,109 @@ form h2 {
 
 .link ul li {
     margin-right: 18%;
+}
+
+
+/* NOSOTROS */
+
+.header-nosotros {
+    padding: 0px 0 100px 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.nosotros-txt {
+    width: 110%;
+}
+
+.nosotros-txt h1 {
+    line-height: 1;
+    color: #323232;
+    text-transform: uppercase;
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+
+.nosotros-txt p {
+    font-size: 16px;
+    color: #818181;
+    margin-bottom: 45px;
+}
+
+.contenedor-general {
+    margin: 20px; /* Ajusta el margen según tus necesidades */
+}
+
+.nosotros-content {
+    margin-bottom: 20px; /* Ajusta el margen inferior para separar las secciones */
+}
+
+
+.mapa-cuadro {
+    background-color: #e0e0e0; /* Color de fondo del cuadro */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centra el contenido del cuadro */
+    margin: 0 auto; /* Añade margen automático para centrar el cuadro horizontalmente */
+    width: 50%; /* Ajusta el ancho del cuadro según tus necesidades */
+}
+
+.mapa-cuadro a {
+    text-decoration: none;
+    color: #333; /* Color del texto del enlace */
+    font-weight: bold;
+}
+
+.imagen-cuadro {
+    overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para efecto de elevación */
+}
+
+.imagen-cuadro img {
+    width: 100%; /* La imagen ocupa el 100% del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto original */
+}
+
+/* SERVICIOS */
+
+.header-servicios {
+    padding: 0px 0 100px 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.servicios-txt {
+    width: 100%;
+}
+
+.servicios-txt h1 {
+    line-height: 1;
+    color: #323232;
+    text-transform: uppercase;
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+
+.servicios-txt p {
+    font-size: 16px;
+    color: #818181;
+    margin-bottom: 45px;
+}
+
+.contenedor-general {
+    margin: 20px; /* Ajusta el margen según tus necesidades */
+}
+
+.servicios-content {
+    margin-bottom: 20px; /* Ajusta el margen inferior para separar las secciones */
+}
+
+.cuadro-izquierdo {
+    flex: 0 0 48%; /* Establece el ancho del cuadro izquierdo */
+    background-color: #e0e0e0; /* Color de fondo del cuadro izquierdo */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
 }
