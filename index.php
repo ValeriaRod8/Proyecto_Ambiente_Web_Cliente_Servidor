@@ -26,8 +26,9 @@
                 <ul>
                 <li><a href="index.php" style="font-weight: bold;">Inicio</a></li>
                 <li><a href="nosotros.php">Nosotros</a></li>
-                <li><a href="servicios_pediatria.php">Servicios</a></li>
+                <li><a href="pediatria.php">Servicios</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
+                <li><a href="admin/admin.php">Admin (Opcion Temporal)</a></li>
                 </ul>
             </nav>
         </div>
@@ -86,7 +87,7 @@
     </section>
 
 
-    <main class="Servicios" style="background-color: #fafafa; height: 260px">
+    <main class="servicios">
 
         <h2> Servicios </h2>
         <?php
@@ -96,7 +97,7 @@
     </main>
 
     <section class="Formulario container" style="margin-top: 50px;">
-        <form method="post" action="send.php" autocomplete="off">
+        <form method="post" action="DAL/send.php" autocomplete="off">
             <h2> Agenda Consulta</h2>
             <div class="input-group">
                 <div class="input-container">

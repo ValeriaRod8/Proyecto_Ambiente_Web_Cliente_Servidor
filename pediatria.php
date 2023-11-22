@@ -26,14 +26,14 @@
                 <ul>
                 <li><a href="index.php">Inicio</a></li>
                 <li><a href="nosotros.php">Nosotros</a></li>
-                <li><a href="servicios_pediatria.php" style="font-weight: bold;">Servicios</a></li>
+                <li><a href="pediatria.php" style="font-weight: bold;">Servicios</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="Servicios" style="height: 260px">
+    <main class="servicios" style="height: 260px">
         <?php
         include_once 'include/templates/template-servicios.php'
         ?>
@@ -42,7 +42,7 @@
 
     <div class="servicios-content container">
             <div class="servicios-txt">
-            <h2 style="text-align: center;">Dermatologia</h2>
+            <h2 style="text-align: center;">Pediatría</h2>
                 <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum 
                     is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
                     text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 

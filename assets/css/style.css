@@ -175,13 +175,29 @@ h3 {
     margin: 0;
 }
 
+.servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fafafa;
+    height: 30rem;
+}
+
+.servicios h2 {
+    margin: 0;
+}
+
 .servicios-content-container {
     display: flex;
     justify-content: space-evenly;
     margin: 20px;
 }
 
-.Servicios i {
+.servicios a:link, a:visited {
+    color: #333;
+}
+
+.servicios i {
     font-size: 50px;
     color: #02B1F4;
 }

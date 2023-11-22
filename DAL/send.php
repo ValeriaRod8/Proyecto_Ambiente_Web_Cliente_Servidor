@@ -24,14 +24,14 @@ if(isset($_POST['send'])){
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_POST['send'])) {
     try {
-      require_once "include/functions/recoge.php";
+      require_once "../include/functions/recoge.php";
       $nombre = recogePost("name");
       $telefono = recogePost("phone");
       $email = recogePost("email");
       $detalle = recogePost("message");
 
       if (!empty($nombre) && !empty($telefono) && !empty($email) && !empty($detalle)) {
-        require_once "DAL/consulta.php";
+        require_once "../DAL/consulta.php";
         if(insertConsulta($nombre, $telefono, $email, $detalle)) {
           echo 'Consulta Enviada Correctamente';
         }
