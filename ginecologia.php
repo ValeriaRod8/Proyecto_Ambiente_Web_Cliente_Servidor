@@ -26,14 +26,14 @@
                 <ul>
                 <li><a href="index.php">Inicio</a></li>
                 <li><a href="nosotros.php">Nosotros</a></li>
-                <li><a href="servicios_pediatria.php" style="font-weight: bold;">Servicios</a></li>
+                <li><a href="pediatria.php" style="font-weight: bold;">Servicios</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="Servicios" style="height: 260px">
+    <main class="servicios" style="height: 260px">
         <?php
         include_once 'include/templates/template-servicios.php'
         ?>

@@ -26,7 +26,7 @@
                 <ul>
                 <li><a href="index.php">Inicio</a></li>
                 <li><a href="nosotros.php">Nosotros</a></li>
-                <li><a href="servicios_pediatria.php">Servicios</a></li>
+                <li><a href="pediatria.php">Servicios</a></li>
                 <li><a href="contacto.php" style="font-weight: bold;">Contacto</a></li>
                 </ul>
             </nav>
