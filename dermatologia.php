@@ -17,7 +17,9 @@
     <header class="header-nosotros">
 
         <div class="menu container">
-            <a href="#" class="logo">Logo</a>
+        <a href="index.php">
+  <img src="logo.png" alt="Logo">
+</a>
             <input type="checkbox" id="menu" />
             <label for="menu">
                 <img src="assets/img/menu.png" class="menu-img" alt="menu">
