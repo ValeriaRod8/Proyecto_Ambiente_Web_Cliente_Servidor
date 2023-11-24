@@ -16,11 +16,11 @@
 
     <header class="header">
 
-  
-    <div class="menu container">
-    <a href="index.php" class="logo">
-      <img src="logo.png" alt="Logo">
-    </a>
+
+        <div class="menu container">
+            <a href="index.php" class="logo">
+                <img src="logo.png" alt="Logo">
+            </a>
 
             <input type="checkbox" id="menu" />
             <label for="menu">
@@ -28,11 +28,11 @@
             </label>
             <nav class="navbar">
                 <ul>
-                <li><a href="index.php" style="font-weight: bold;">Inicio</a></li>
-                <li><a href="nosotros.php">Nosotros</a></li>
-                <li><a href="pediatria.php">Servicios</a></li>
-                <li><a href="contacto.php">Contacto</a></li>
-                <li><a href="admin/admin.php">Admin (Opcion Temporal)</a></li>
+                    <li><a href="index.php" style="font-weight: bold;">Inicio</a></li>
+                    <li><a href="nosotros.php">Nosotros</a></li>
+                    <li><a href="pediatria.php">Servicios</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                    <li><a href="admin/admin.php">Admin (Opcion Temporal)</a></li>
                 </ul>
             </nav>
         </div>
@@ -101,28 +101,26 @@
     </main>
 
     <section class="Formulario container" style="margin-top: 50px;">
-        <form method="post" action="DAL/send.php" autocomplete="off">
+        <form method="post" action="DAL/crearConsulta.php" autocomplete="off">
             <h2> Agenda Consulta</h2>
             <div class="input-group">
                 <div class="input-container">
                     <i class="form__icon fa-solid fa-user"></i>
-                    <input type="text" name="name" placeholder="Nombre y Apellido" required>
+                    <input type="text" name="inputNombre" placeholder="Nombre" required>
                 </div>
                 <div class="input-container">
                     <i class="form__icon fa-solid fa-phone"></i>
-                    <input type="tel" name="phone" placeholder="Telefono Celular" required>
+                    <input type="tel" name="inputTelefono" placeholder="Teléfono" required>
                 </div>
                 <div class="input-container">
                     <i class="form__icon fa-solid fa-envelope"></i>
-                    <input type="email" name="email" placeholder="Correo" required>
+                    <input type="email" name="inputCorreo" placeholder="Correo" required>
                 </div>
                 <div class="input-container">
-                    <textarea name="message" placeholder="Detalles de la Consulta" required></textarea>
+                    <textarea name="inputDetalle" placeholder="Detalles de la Consulta" required></textarea>
                 </div>
-                <input type="submit" name="send" class="btn">
-
+                <input type="submit" class="btn" name="consultaUsuario">
             </div>
-
         </form>
     </section>
 
