@@ -2,7 +2,21 @@
 
 require_once "conexion.php";
 
-function insertConsulta($pNombre, $pCorreo, $pTelefono, $pDetalle)
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_REQUEST['request'])) {
+        $request = $_REQUEST['request'];
+        switch ($request) {
+            case "eliminarConsulta":
+                $id = $_REQUEST['id'];
+                if (eliminarConsulta($id) == true) {
+                    echo "Consulta Eliminada Correctamente";
+                }
+                break;
+        }
+    }
+}
+
+function crearConsulta($pNombre, $pCorreo, $pTelefono, $pDetalle)
 {
     $retorno = false;
 
@@ -21,6 +35,34 @@ function insertConsulta($pNombre, $pCorreo, $pTelefono, $pDetalle)
             if ($stmt->execute()) {
                 $retorno = true;
             }
+        }
+    } catch (\Throwable $th) {
+        echo $th;
+    } finally {
+        Desconecta($oConexion);
+    }
+
+    return $retorno;
+}
+
+function eliminarConsulta($pIdConsulta)
+{
+    $retorno = false;
+
+    try {
+        $oConexion = Conecta();
+
+        if (mysqli_set_charset($oConexion, "utf8")) {
+            $stmt = $oConexion->prepare("delete from consultas where id = ?");
+            $stmt->bind_param("i", $idConsulta);
+
+            $idConsulta = $pIdConsulta;
+
+            if ($stmt->execute()) {
+                $retorno = true;
+            }
+
+            $stmt->close();
         }
     } catch (\Throwable $th) {
         echo $th;
