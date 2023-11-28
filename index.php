@@ -32,6 +32,7 @@
                     <li><a href="nosotros.php">Nosotros</a></li>
                     <li><a href="pediatria.php">Servicios</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
+                    <li><a href="form_insert.php">Con</a></li>
                     <li><a href="admin/admin.php">Admin (Opcion Temporal)</a></li>
                 </ul>
             </nav>
