@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/servicio.css">
     <title>Formulario de Citas</title>
     <style>
         body {
@@ -71,6 +75,29 @@
     </style>
 </head>
 <body>
+<header class="header">
+
+
+<div class="menu container">
+    <a href="index.php" class="logo">
+        <img src="logo.png" alt="Logo">
+    </a>
+
+    <input type="checkbox" id="menu" />
+    <label for="menu">
+        <img src="assets/img/menu.png" class="menu-img" alt="menu">
+    </label>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.php" style="font-weight: bold;">Inicio</a></li>
+            <li><a href="nosotros.php">Nosotros</a></li>
+            <li><a href="pediatria.php">Servicios</a></li>
+            <li><a href="contacto.php">Contacto</a></li>
+            <li><a href="form_insert.php">Citas</a></li>
+            <li><a href="admin/admin.php">Admin (Opcion Temporal)</a></li>
+        </ul>
+    </nav>
+</div>
 
     <form action="metodos/insert.php" method="post">
         <p class="text-danger"><b>Rellene todos los campos</b></p>

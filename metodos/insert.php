@@ -31,9 +31,14 @@ if ($existeCita > 0) {
     VALUES(?,?,?,?,?,?,?,?)");
     
     if ($sentencia->execute([$nombre, $apellidos, $correo, $servicio, $fecha, $hora, $mensaje, $estado])) {
-        header('Location: ../Result.php'); 
+        header('Location: ../RegistroExito.php'); 
     } else {
         echo 'Error al insertar datos.';
     }
+    
 }
+
 ?>
+
+<hr>
+                <a href="form_insert.php" class="btn btn-warning">Regresar</a>
