@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Consultas</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/consultas.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -117,7 +119,7 @@
                     <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="admin.php">
                                     <svg class="bi">
                                         <use xlink:href="#house-fill" />
                                     </svg>
@@ -125,7 +127,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="consultas.php">
+                                <a class="nav-link d-flex align-items-center gap-2 active" href="consultas.php">
                                     <svg class="bi">
                                         <use xlink:href="#file-earmark" />
                                     </svg>
@@ -134,7 +136,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="reservas.php">
+                                <a class="nav-link d-flex align-items-center gap-2 active" href="#">
                                     <svg class="bi">
                                         <use xlink:href="#file-earmark" />
                                     </svg>
@@ -161,13 +163,109 @@
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Dashboard</h1>
+                    <h2 class="h2" id="tituloReservas">Reservas</h2>
+                    <button class="btn btn-primary" id="botonMostrar" type="button" onclick="mostrarForm()">Nueva Reserva</button>
                 </div>
+                <div class="table-responsive small" id="tablaReservas">
+                    <?php
+                    require_once "../DAL/procesar_reserva.php";
+
+                    $query = "select id, nombre, telefono, correo, fecha, servicio from reserva";
+                    $reservas = getArrayReserva($query);
+
+                    if (!empty($reservas)) {
+                        echo "<table class='table table-hover'";
+                        echo "<thead>";
+                        echo "<tr>";
+                        echo "<th scope='col'>Nombre</th>";
+                        echo "<th scope='col'>Telefono</th>";
+                        echo "<th scope='col'>Correo</th>";
+                        echo "<th scope='col'>Fecha</th>";
+                        echo "<th scope='col'>Servicio</th>";
+                        echo "<th scope='col'>Acciones</th>";
+                        echo "</tr>";
+                        echo "</thead>";
+                        foreach ($reservas  as $reserva) {
+                            echo "<tr data-id=" . $reserva['id'] . ">";
+                            echo "<td>" . $reserva['nombre'] . "</td>";
+                            echo "<td>" . $reserva['telefono'] . "</td>";
+                            echo "<td>" . $reserva['correo'] . "</td>";
+                            echo "<td>" . $reserva['fecha'] . "</td>";
+                            echo "<td>" . $reserva['servicio'] . "</td>";
+                            echo
+                            "<td>
+                                <button class='btn btn-outline-warning' onclick='actualizarReserva(\"actualizarReserva\", " . $reserva['id'] . ")'>Actualizar</button>
+                                <button type='button' class='btn btn-outline-danger' data-bs-toggle='modal' data-bs-target='#modalEliminar" . $reserva['id'] . "'>Eliminar</button>
+                                <div class='modal fade' id='modalEliminar" . $reserva['id'] . "' tabindex='-1'>
+                                    <div class='modal-dialog modal-dialog-centered'>
+                                        <div class='modal-content'>
+                                            <div class='modal-header'>
+                                                <h5 class='modal-title'>Eliminar Reserva</h5>
+                                                <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                                            </div>
+                                            <div class='modal-body d-flex justify-content-center'>
+                                                <p style='font-size: 1.2rem';>¿Seguro de Eliminar la Reserva de <strong>" . $reserva['nombre'] . "</strong>?</p>
+                                            </div>
+                                            <div class='modal-footer'>
+                                                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
+                                                <button class='btn btn-danger' data-bs-dismiss='modal' onclick='eliminarReserva(\"eliminarReserva\", " . $reserva['id'] . ")'>Eliminar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+                    } else {
+                        echo "<h2>No hay Reservas</h2>";
+                    }
+                    ?>
+                </div>
+                
+                <form class="row g-3" id="formReservas" method="post" action="../DAL/crearReserva.php" autocomplete="off" style="display: none;">
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="telefono" class="form-label">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="correo" class="form-label">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" required class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="fecha" class="form-label">Fecha:</label>
+                        <input type="date" id="fecha" name="fecha" required class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="servicio" class="form-label">Servicio:</label>
+                        <select id="servicio" name="servicio" required class="form-select">
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="pediatria">Pediatría</option>
+                            <option value="ginecologia">Ginecologia</option>
+                            <option value="dermartologia">Dermartologia</option>
+                            <option value="cardiologia">Cardiologia</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" name="reservaAdmin">Reservar</button>
+                    </div>
+                </form>
+
             </main>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../assets/js/jquery-3.5.1.js"></script>
     <script src="../assets/js/admin.js"></script>
+    <script src="../assets/js/reserva.js"></script>
 </body>
 
 </html>
