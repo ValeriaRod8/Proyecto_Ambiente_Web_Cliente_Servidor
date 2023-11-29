@@ -155,11 +155,11 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h2 class="h2" id="tituloConsultas">Consultas</h2>
-                    <button class="btn btn-primary" id="botonMostrar" type="button" onclick="mostrarForm()">Nueva Consulta</button>
+                    <button class="btn btn-primary" id="botonMostrar" type="button" onclick="mostrarFormCrear()">Nueva Consulta</button>
                 </div>
                 <div class="table-responsive small" id="tablaConsultas">
                     <?php
-                    require_once "../DAL/consulta.php";
+/*                     require_once "../DAL/consulta.php";
 
                     $query = "select id, nombre, telefono, correo, detalle from consultas";
                     $consultas = getArrayConsulta($query);
@@ -208,7 +208,7 @@
                         echo "</table>";
                     } else {
                         echo "<h2>No hay Consultas</h2>";
-                    }
+                    } */
 
 
                     ?>
@@ -233,6 +233,7 @@
                         <textarea class="form-control" id="inputDetalle" name="inputDetalle" rows="3" required></textarea>
                     </div>
                     <div class="col-12">
+                        <input type="hidden" id="inputId" name="inputId">
                         <button type="submit" class="btn btn-primary mt-5" name="consultaAdmin">Crear Consulta</button>
                     </div>
                 </form>
