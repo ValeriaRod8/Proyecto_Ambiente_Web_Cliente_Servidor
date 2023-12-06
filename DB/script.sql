@@ -1,6 +1,6 @@
 CREATE TABLE `consultas` (
   `Id` int(11) NOT NULL,
-  `Nombre` varchar(10) NOT NULL,
+  `Nombre` varchar(50) NOT NULL,
   `Telefono` varchar(10) NOT NULL,
   `Correo` varchar(50) NOT NULL,
   `Detalle` text NOT NULL

@@ -234,7 +234,7 @@
                     </div>
                     <div class="col-12">
                         <input type="hidden" id="inputId" name="inputId">
-                        <button type="submit" class="btn btn-primary mt-5" name="consultaAdmin">Crear Consulta</button>
+                        <button type="submit" class="btn btn-primary mt-5" id="botonFormulario" name="consultaAdmin">Crear Consulta</button>
                     </div>
                 </form>
             </main>

@@ -1,28 +1,12 @@
 <?php
 
-require_once "conexion.php";
+require_once "../conexion.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     echo getJSON();
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_REQUEST['request'])) {
-        $request = $_REQUEST['request'];
-        switch ($request) {
-            case "eliminarConsulta":
-                $id = $_REQUEST['id'];
-                if (eliminarConsulta($id) == true) {
-                    echo "Consulta Eliminada Correctamente";
-                }
-                break;
-            case "actualizarConsulta":
-                $id = $_REQUEST['id'];
-        }
-    }
-}
-
-function crearConsulta($pNombre, $pCorreo, $pTelefono, $pDetalle)
+function crearConsulta($pNombre, $pTelefono, $pCorreo, $pDetalle)
 {
     $retorno = false;
 
@@ -30,12 +14,12 @@ function crearConsulta($pNombre, $pCorreo, $pTelefono, $pDetalle)
         $oConexion = Conecta();
 
         if (mysqli_set_charset($oConexion, "utf8")) {
-            $stmt = $oConexion->prepare("insert into consultas (nombre, correo, telefono, detalle) values (?, ?, ?, ?)");
-            $stmt->bind_param("ssss", $iNombre, $iCorreo, $iTelefono, $iDetalle);
+            $stmt = $oConexion->prepare("insert into consultas (nombre, telefono, correo, detalle) values (?, ?, ?, ?)");
+            $stmt->bind_param("ssss", $iNombre, $iTelefono, $iCorreo, $iDetalle);
 
             $iNombre = $pNombre;
-            $iCorreo = $pCorreo;
             $iTelefono = $pTelefono;
+            $iCorreo = $pCorreo;
             $iDetalle = $pDetalle;
 
             if ($stmt->execute()) {
@@ -51,7 +35,7 @@ function crearConsulta($pNombre, $pCorreo, $pTelefono, $pDetalle)
     return $retorno;
 }
 
-function actualizarConsulta($pId, $pNombre, $pCorreo, $pTelefono, $pDetalle)
+function actualizarConsulta($pId, $pNombre, $pTelefono, $pCorreo, $pDetalle)
 {
     $retorno = false;
 
@@ -59,12 +43,12 @@ function actualizarConsulta($pId, $pNombre, $pCorreo, $pTelefono, $pDetalle)
         $oConexion = Conecta();
 
         if (mysqli_set_charset($oConexion, "utf8")) {
-            $stmt = $oConexion->prepare("UPDATE consultas SET nombre = ?, correo = ?, telefono = ?, detalle = ? WHERE id = ?");
-            $stmt->bind_param("ssssi", $iNombre, $iCorreo, $iTelefono, $iDetalle, $iId);
+            $stmt = $oConexion->prepare("UPDATE consultas SET nombre = ?, telefono = ?, correo = ?, detalle = ? WHERE id = ?");
+            $stmt->bind_param("ssssi", $iNombre, $iTelefono, $iCorreo, $iDetalle, $iId);
 
             $iNombre = $pNombre;
-            $iCorreo = $pCorreo;
             $iTelefono = $pTelefono;
+            $iCorreo = $pCorreo;
             $iDetalle = $pDetalle;
             $iId = $pId;
 
