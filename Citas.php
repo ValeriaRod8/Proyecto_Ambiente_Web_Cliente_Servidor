@@ -99,7 +99,7 @@
     </nav>
 </div>
 
-    <form action="metodos/insert.php" method="post">
+    <form action="metodos/ConsultaCita.php" method="post">
         <p class="text-danger"><b>Rellene todos los campos</b></p>
 
         <div class="form-group">

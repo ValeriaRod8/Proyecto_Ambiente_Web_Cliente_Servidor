@@ -39,7 +39,7 @@
                 ?>
 
                 <hr>
-                <a href="form_insert.php" class="btn btn-warning">Regresar</a>
+                <a href="Citas.php" class="btn btn-warning">Regresar</a>
             </div>
         </div>
     </div>

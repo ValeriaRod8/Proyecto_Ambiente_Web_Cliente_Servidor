@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Tu código de encabezado aquí -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Registro Exitoso de Cita</title>
@@ -39,7 +39,7 @@
           
 
                 <hr>
-                <a href="form_insert.php" class="btn btn-warning">Regresar al Formulario</a>
+                <a href="Citas.php" class="btn btn-warning">Regresar al Formulario</a>
             </div>
         </div>
     </div>

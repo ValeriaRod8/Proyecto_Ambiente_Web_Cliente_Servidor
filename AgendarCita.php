@@ -1,2 +1,2 @@
 
-<?php include "metodos/form_insert.php";?>
+<?php include "metodos/Citas.php";?>

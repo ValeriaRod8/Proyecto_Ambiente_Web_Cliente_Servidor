@@ -23,7 +23,7 @@ $consulta->execute([$fecha, $hora]);
 $existeCita = $consulta->fetchColumn();
 
 if ($existeCita > 0) {
-    header('Location: ../error.php');
+    header('Location: ../ErrorCita.php');
     echo 'Espacio ocupado.';
 } else {
 
@@ -31,7 +31,7 @@ if ($existeCita > 0) {
     VALUES(?,?,?,?,?,?,?,?)");
     
     if ($sentencia->execute([$nombre, $apellidos, $correo, $servicio, $fecha, $hora, $mensaje, $estado])) {
-        header('Location: ../RegistroExito.php'); 
+        header('Location: ../RegistroCita.php'); 
     } else {
         echo 'Error al insertar datos.';
     }
@@ -41,4 +41,4 @@ if ($existeCita > 0) {
 ?>
 
 <hr>
-                <a href="form_insert.php" class="btn btn-warning">Regresar</a>
+                <a href="Citas.php" class="btn btn-warning">Regresar</a>
