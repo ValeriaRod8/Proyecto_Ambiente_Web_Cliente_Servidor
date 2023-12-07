@@ -6,17 +6,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_REQUEST['request'])) {
         $request = $_REQUEST['request'];
         switch ($request) {
-            case "eliminarConsulta":
+            case "eliminarCita":
                 $id = $_REQUEST['id'];
-                if (eliminarConsulta($id) == true) {
-                    echo "Consulta Eliminada Correctamente";
+                if (eliminarCita($id) == true) {
+                    echo "Cita Eliminada Correctamente";
                 }
                 break;
         }
     }
 }
 
-function crearConsulta($pNombre, $pCorreo, $pTelefono, $pDetalle)
+function crearCita($especialista, $correoEspecialista, $correoCliente, $especialidad, $descripcion, $fecha, $notas)
 {
     $retorno = false;
 
@@ -24,13 +24,16 @@ function crearConsulta($pNombre, $pCorreo, $pTelefono, $pDetalle)
         $oConexion = Conecta();
 
         if (mysqli_set_charset($oConexion, "utf8")) {
-            $stmt = $oConexion->prepare("insert into consultas (nombre, correo, telefono, detalle) values (?, ?, ?, ?)");
-            $stmt->bind_param("ssss", $iNombre, $iCorreo, $iTelefono, $iDetalle);
+            $stmt = $oConexion->prepare("INSERT INTO cita (Especialista, CorreoEspecialista, CorreoCliente, Especialidad, Descripcion, Fecha, Notas) VALUES (?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("sssssss", $iEspecialista, $iCorreoEspecialista, $iCorreoCliente, $iEspecialidad, $iDescripcion, $iFecha, $iNotas);
 
-            $iNombre = $pNombre;
-            $iCorreo = $pCorreo;
-            $iTelefono = $pTelefono;
-            $iDetalle = $pDetalle;
+            $iEspecialista = $especialista;
+            $iCorreoEspecialista = $correoEspecialista;
+            $iCorreoCliente = $correoCliente;
+            $iEspecialidad = $especialidad;
+            $iDescripcion = $descripcion;
+            $iFecha = $fecha;
+            $iNotas = $notas;
 
             if ($stmt->execute()) {
                 $retorno = true;
@@ -45,7 +48,7 @@ function crearConsulta($pNombre, $pCorreo, $pTelefono, $pDetalle)
     return $retorno;
 }
 
-function actualizarConsulta($pIdConsulta)
+function actualizarCita($pIdCita, $pEspecialista, $pCorreoEspecialista, $pCorreoCliente, $pEspecialidad, $pDescripcion, $pFecha, $pNotas)
 {
     $retorno = false;
 
@@ -53,38 +56,17 @@ function actualizarConsulta($pIdConsulta)
         $oConexion = Conecta();
 
         if (mysqli_set_charset($oConexion, "utf8")) {
-            $stmt = $oConexion->prepare("update from consultas where id = ?");
-            $stmt->bind_param("i", $idConsulta);
+            $stmt = $oConexion->prepare("UPDATE cita SET Especialista=?, CorreoEspecialista=?, CorreoCliente=?, Especialidad=?, Descripcion=?, Fecha=?, Notas=? WHERE Id = ?");
+            $stmt->bind_param("sssssssi", $iEspecialista, $iCorreoEspecialista, $iCorreoCliente, $iEspecialidad, $iDescripcion, $iFecha, $iNotas, $iIdCita);
 
-            $idConsulta = $pIdConsulta;
-
-            if ($stmt->execute()) {
-                $retorno = true;
-            }
-
-            $stmt->close();
-        }
-    } catch (\Throwable $th) {
-        echo $th;
-    } finally {
-        Desconecta($oConexion);
-    }
-
-    return $retorno;
-}
-
-function eliminarConsulta($pIdConsulta)
-{
-    $retorno = false;
-
-    try {
-        $oConexion = Conecta();
-
-        if (mysqli_set_charset($oConexion, "utf8")) {
-            $stmt = $oConexion->prepare("delete from consultas where id = ?");
-            $stmt->bind_param("i", $idConsulta);
-
-            $idConsulta = $pIdConsulta;
+            $iIdCita = $pIdCita;
+            $iEspecialista = $pEspecialista;
+            $iCorreoEspecialista = $pCorreoEspecialista;
+            $iCorreoCliente = $pCorreoCliente;
+            $iEspecialidad = $pEspecialidad;
+            $iDescripcion = $pDescripcion;
+            $iFecha = $pFecha;
+            $iNotas = $pNotas;
 
             if ($stmt->execute()) {
                 $retorno = true;
@@ -101,15 +83,41 @@ function eliminarConsulta($pIdConsulta)
     return $retorno;
 }
 
-function getArrayConsulta($sql)
+function eliminarCita($pIdCita)
+{
+    $retorno = false;
+
+    try {
+        $oConexion = Conecta();
+
+        if (mysqli_set_charset($oConexion, "utf8")) {
+            $stmt = $oConexion->prepare("DELETE FROM cita WHERE Id = ?");
+            $stmt->bind_param("i", $iIdCita);
+
+            $iIdCita = $pIdCita;
+
+            if ($stmt->execute()) {
+                $retorno = true;
+            }
+
+            $stmt->close();
+        }
+    } catch (\Throwable $th) {
+        echo $th;
+    } finally {
+        Desconecta($oConexion);
+    }
+
+    return $retorno;
+}
+
+function getArrayCita($sql)
 {
     try {
         $oConexion = Conecta();
 
-        //generar la consulta
         if (mysqli_set_charset($oConexion, "utf8")) {
-
-            if (!$result = mysqli_query($oConexion, $sql)) die(); //cancelamos el programa
+            if (!$result = mysqli_query($oConexion, $sql)) die();
 
             $retorno = array();
 
@@ -122,6 +130,7 @@ function getArrayConsulta($sql)
     } finally {
         Desconecta($oConexion);
     }
+
     return $retorno;
 }
 
@@ -136,3 +145,4 @@ function testConectar()
         Desconecta($oConexion);
     }
 }
+?>
