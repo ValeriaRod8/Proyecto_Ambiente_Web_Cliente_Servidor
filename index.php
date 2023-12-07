@@ -23,6 +23,7 @@
                     <li><a href="nosotros.php">Nosotros</a></li>
                     <li><a href="pediatria.php">Servicios</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
+                    <li><a href="form_insert.php">Citas</a></li>
                     <li><a href="login.php">Iniciar Sesión</a></li>
                 </ul>
             </nav>
