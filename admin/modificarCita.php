@@ -1,10 +1,25 @@
+<?php 
+include "../DAL/conexion.php";
+$conexion = Conecta();
+
+include "../DAL/citas/modificarCita.php";
+$id=$_GET["id"];
+echo '<script>console.log(`'.$id.'`); </script>';
+
+$sql= $conexion->query("SELECT * FROM cita WHERE id = ('$id')");
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="auto">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultas</title>
+    <title>Citas</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/admin.css">
     <link rel="stylesheet" href="../assets/css/consultas.css">
@@ -142,9 +157,15 @@
                                     Reservas
                                 </a>
                             </li>
-                            
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-2" href="listarCitas.php">
+                                    <svg class="bi">
+                                        <use xlink:href="#file-earmark" />
+                                    </svg>
+                                    Citas
+                                </a>
+                            </li>
                         </ul>
-                        
 
                         <hr class="my-3">
 
@@ -164,91 +185,52 @@
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h2 class="h2" id="tituloConsultas">Consultas</h2>
-                    <button class="btn btn-primary" id="botonMostrar" type="button" onclick="mostrarForm()">Nueva Consulta</button>
+                    <h2 class="h2" id="tituloConsultas">Modificar Cita</h2>
                 </div>
-                <div class="table-responsive small" id="tablaConsultas">
+                <form class="row" method="post" action="">
+                    <input type="hidden" name="id" value="<?= $_GET["id"] ?>">
                     <?php
-                    require_once "../DAL/consultas/consulta.php";
-
-                    $query = "select id, nombre, telefono, correo, detalle from consultas";
-                    $consultas = getArrayConsulta($query);
-
-                    if (!empty($consultas)) {
-                        echo "<table class='table table-hover'";
-                        echo "<thead>";
-                        echo "<tr>";
-                        echo "<th scope='col'>Nombre</th>";
-                        echo "<th scope='col'>Telefono</th>";
-                        echo "<th scope='col'>Correo</th>";
-                        echo "<th scope='col'>Detalle</th>";
-                        echo "<th scope='col'>Acciones</th>";
-                        echo "</tr>";
-                        echo "</thead>";
-                        foreach ($consultas  as $consulta) {
-                            echo "<tr data-id=" . $consulta['id'] . ">";
-                            echo "<td>" . $consulta['nombre'] . "</td>";
-                            echo "<td>" . $consulta['telefono'] . "</td>";
-                            echo "<td>" . $consulta['correo'] . "</td>";
-                            echo "<td>" . $consulta['detalle'] . "</td>";
-                            echo
-                            "<td>
-                                <button type='button' class='btn btn-outline-warning'>
-                                    <a style='text-decoration: none; color: inherit;' href='./modificarConsulta.php?id=" . $consulta['id'] . "'>Actualizar</a>
-                                </button>
-                        
-                                <button type='button' class='btn btn-outline-danger' data-bs-toggle='modal' data-bs-target='#modalEliminar" . $consulta['id'] . "'>Eliminar</button>
-                                <div class='modal fade' id='modalEliminar" . $consulta['id'] . "' tabindex='-1'>
-                                    <div class='modal-dialog modal-dialog-centered'>
-                                        <div class='modal-content'>
-                                            <div class='modal-header'>
-                                                <h5 class='modal-title'>Eliminar Consulta</h5>
-                                                <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
-                                            </div>
-                                            <div class='modal-body d-flex justify-content-center'>
-                                                <p style='font-size: 1.2rem';>¿Seguro de Eliminar la Consulta de <strong>" . $consulta['nombre'] . "</strong>?</p>
-                                            </div>
-                                            <div class='modal-footer'>
-                                                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
-                                                <button class='btn btn-danger' data-bs-dismiss='modal' onclick='eliminarConsulta(\"eliminarConsulta\", " . $consulta['id'] . ")'>Eliminar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>";
-                            echo "</tr>";
-                        }
-                        echo "</table>";
-                    } else {
-                        echo "<h2>No hay Consultas</h2>";
-                    }
-
-
+                    
+                    
+                    // while ($datos = $sql->fetch_object()) {
+                        $citas = $sql->fetch_object();
                     ?>
+                        <div class="form-input-sm mt-3">
+                            <label for="inputEspecialista" class="form-label">Especialista</label>
+                            <input type="text" class="form-control" id="inputEspecialista" name="inputEspecialista" value="<?= $citas->Especialista ?>">
+                        </div>
+                        <div class="form-input-sm mt-3">
+                            <label for="inputCorreoEspecialista" class="form-label">Correo del Especialista</label>
+                            <input type="email" class="form-control" id="inputCorreoEspecialista" name="inputCorreoEspecialista" value="<?= $citas->CorreoEspecialista ?>">
+                        </div>
+                        </div>
+                        <div class="form-input-lg mt-3">
+                            <label for="inputCorreoCliente" class="form-label">Correo del Cliente</label>
+                            <input type="email" class="form-control" id="inputCorreoCliente" name="inputCorreoCliente" value="<?= $citas->CorreoCliente ?>">
+                        </div>
+                        <div class="form-input-lg mt-3">
+                            <label for="inputEspecialidad" class="form-label">Especialidad</label>
+                            <input type="text" class="form-control" id="inputEspecialidad" name="inputEspecialidad" value="<?= $citas->Especialidad ?>">
+                        </div>
+                        <div class="form-input-lg mt-3">
+                            <label for="inputDescripcion" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="inputDescripcion" name="inputDescripcion" rows="3" ><?= $citas->Descripcion ?></textarea>
+                        </div>
+                        <div class="form-input-lg mt-3">
+                            <label for="inputFecha" class="form-label">Fecha</label>
+                            <input type="datetime-local" class="form-control" id="inputFecha" name="inputFecha" value="<?= $citas->Fecha ?>">
+                        </div>
+                        <div class="form-input-lg mt-3">
+                            <label for="inputNotas" class="form-label">Notas</label>
+                            <textarea class="form-control" id="inputNotas" name="inputNotas" rows="3" ><?= $citas->Notas ?></textarea>
+                        </div>
+                    <?php
+                    // }
+                    ?>
+                <div class="col-12">
+                    <button type="submit" name="btnModificar" class="btn btn-primary mt-5" value="ok">Modificar Cita</button>
                 </div>
-                <form class="row" id="formConsultas" method="post" action="../DAL/consultas/crearConsulta.php" style="display: none;">
-                    <div class="row">
-                        <div class="form-input-sm mt-3">
-                            <label for="inputNombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="inputNombre" name="inputNombre" required>
-                        </div>
-                        <div class="form-input-sm mt-3">
-                            <label for="inputTelefono" class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" id="inputTelefono" name="inputTelefono" required>
-                        </div>
-                    </div>
-                    <div class="form-input-lg mt-3">
-                        <label for="inputCorreo" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="inputCorreo" name="inputCorreo" required>
-                    </div>
-                    <div class="form-input-lg mt-3">
-                        <label for="inputDetalle" class="form-label">Detalle de la Consulta</label>
-                        <textarea class="form-control" id="inputDetalle" name="inputDetalle" rows="3" required></textarea>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary mt-5" name="consultaAdmin">Crear Consulta</button>
-                    </div>
-                </form>
+            </form>
             </main>
         </div>
     </div>
