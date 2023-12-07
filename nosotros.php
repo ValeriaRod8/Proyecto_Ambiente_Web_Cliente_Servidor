@@ -17,79 +17,76 @@
     <header class="header-nosotros">
 
         <div class="menu container">
-        <a href="index.php">
-  <img src="logo.png" alt="Logo">
-</a>
-            <input type="checkbox" id="menu" />
-            <label for="menu">
-                <img src="assets/img/menu.png" class="menu-img" alt="menu">
-            </label>
+            <a href="index.php">
+                <img src="logo.png" alt="Logo">
+            </a>
             <nav class="navbar">
                 <ul>
-                <li><a href="index.php">Inicio</a></li>
-                <li><a href="nosotros.php" style="font-weight: bold;">Nosotros</a></li>
-                <li><a href="pediatria.php">Servicios</a></li>
-                <li><a href="contacto.php">Contacto</a></li>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="nosotros.php" style="font-weight: bold;">Nosotros</a></li>
+                    <li><a href="pediatria.php">Servicios</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                    <li><a href="login.php">Iniciar Sesión</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <div class="nosotros-content container">
-            <div class="nosotros-txt">
+        <div class="nosotros-txt">
             <h2 style="text-align: left;">Sobre Nosotros</h2>
-                <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum 
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley 
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
-                </p>
-            </div>
+            <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
+                of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+            </p>
         </div>
+    </div>
 
-        <div class="nosotros-content container">
-            <div class="nosotros-txt">
+    <div class="nosotros-content container">
+        <div class="nosotros-txt">
             <h2 style="text-align: left;">Mision</h2>
-                <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! 
-                    Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum 
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley 
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
-                </p>
-            </div>
+            <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque!
+                Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
+                of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+            </p>
         </div>
+    </div>
 
-        <div class="nosotros-content container">
-            <div class="nosotros-txt">
+    <div class="nosotros-content container">
+        <div class="nosotros-txt">
             <h2 style="text-align: left;">Vision</h2>
-                <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! 
-                    Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum 
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley 
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
-                </p>
-            </div>
+            <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque!
+                Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
+                of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+            </p>
         </div>
+    </div>
 
-        <div class="nosotros-content container">
-            <div class="nosotros-txt">
+    <div class="nosotros-content container">
+        <div class="nosotros-txt">
             <h2 style="text-align: left;">Ubicación</h2>
-                <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! 
-                    Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum 
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley 
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
-                </p>
-                <div class="mapa-cuadro">
-                    <a href="https://www.google.com/maps/place/Hospital+La+Cat%C3%B3lica/@9.9490601,-84.0613925,17z/data=!3m1!4b1!4m6!3m5!1s0x8fa0e47d57bfdbd5:0xbd8efb4b06725e69!8m2!3d9.9490548!4d-84.0588176!16s%2Fg%2F1tx482y_?entry=ttu" target="_blank">
-                        Ver en Google Maps
-                    </a>
-                </div>
+            <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque!
+                Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
+                of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+            </p>
+            <div class="mapa-cuadro">
+                <a href="https://www.google.com/maps/place/Hospital+La+Cat%C3%B3lica/@9.9490601,-84.0613925,17z/data=!3m1!4b1!4m6!3m5!1s0x8fa0e47d57bfdbd5:0xbd8efb4b06725e69!8m2!3d9.9490548!4d-84.0588176!16s%2Fg%2F1tx482y_?entry=ttu" target="_blank">
+                    Ver en Google Maps
+                </a>
             </div>
         </div>
+    </div>
 
 
     <footer class="footer" style="background-color: #fafafa; height: 260px">
@@ -117,7 +114,7 @@
     /* require_once 'DAL/consulta.php';
     testConectar(); */
     ?>
-   
+
 
     <script>
         function myFuntion() {
