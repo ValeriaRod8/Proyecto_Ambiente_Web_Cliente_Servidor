@@ -2,6 +2,16 @@ CREATE DATABASE consultorio;
 
 USE consultorio;
 
+CREATE TABLE `usuarios` (
+  `Id` INT(11) NOT NULL AUTO_INCREMENT, 
+  `Nombre` VARCHAR(255) NOT NULL ,
+  `Correo` VARCHAR(255) NOT NULL ,
+  `Password` VARCHAR(255) NOT NULL ,
+  `Rol` VARCHAR(50) NOT NULL DEFAULT 'Cliente', 
+  PRIMARY KEY (`Id`),
+  UNIQUE (`Correo`)
+) ENGINE = InnoDB;
+
 CREATE TABLE `consultas` (
   `Id` int(11) NOT NULL,
   `Nombre` varchar(50) NOT NULL,
@@ -27,13 +37,6 @@ CREATE TABLE `reserva` (
   `Servicio` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-CREATE TABLE `usuarios` (
-  `id` int(2) NOT NULL,
-  `nombre` varchar(256) COLLATE utf8_spanish2_ci NOT NULL,
-  `username` varchar(256) COLLATE utf8_spanish2_ci NOT NULL,
-  `password` varchar(256) COLLATE utf8_spanish2_ci NOT NULL,
-  `modificado` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 CREATE TABLE Reservas (
     ID INT AUTO_INCREMENT PRIMARY KEY,
