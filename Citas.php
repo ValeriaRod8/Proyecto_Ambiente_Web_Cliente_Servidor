@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,17 +10,22 @@
     <link rel="stylesheet" href="assets/css/servicio.css">
     <title>Formulario de Citas</title>
     <style>
+        header {
+            margin-bottom: -320px; 
+        }
+        
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
             margin: 20px;
+            font-size: 16px;
         }
 
         form {
-            max-width: 600px;
+            max-width: 800px;
             margin: auto;
             background-color: #fff;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -43,12 +49,13 @@
         select,
         textarea {
             width: 100%;
-            padding: 8px;
+            padding: 12px;
             margin-top: 5px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 16px;
         }
 
         select {
@@ -56,12 +63,13 @@
         }
 
         button {
-            padding: 10px 20px;
+            padding: 15px 25px;
             color: #fff;
             background-color: #007bff;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 16px;
         }
 
         button.btn-warning {
@@ -75,31 +83,31 @@
     </style>
 </head>
 <body>
-<header class="header">
+    <header class="header">
+        <div class="menu container">
+            <a href="index.php" class="logo">
+                <img src="logo.png" alt="Logo">
+            </a>
 
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="assets/img/menu.png" class="menu-img" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.php" style="font-weight: bold;">Inicio</a></li>
+                    <li><a href="nosotros.php">Nosotros</a></li>
+                    <li><a href="pediatria.php">Servicios</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                    <li><a href="Citas.php">Citas</a></li>
+                    <li><a href="admin/admin.php">Admin (Opcion Temporal)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
 
-<div class="menu container">
-    <a href="index.php" class="logo">
-        <img src="logo.png" alt="Logo">
-    </a>
-
-    <input type="checkbox" id="menu" />
-    <label for="menu">
-        <img src="assets/img/menu.png" class="menu-img" alt="menu">
-    </label>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.php" style="font-weight: bold;">Inicio</a></li>
-            <li><a href="nosotros.php">Nosotros</a></li>
-            <li><a href="pediatria.php">Servicios</a></li>
-            <li><a href="contacto.php">Contacto</a></li>
-            <li><a href="form_insert.php">Citas</a></li>
-            <li><a href="admin/admin.php">Admin (Opcion Temporal)</a></li>
-        </ul>
-    </nav>
-</div>
-
-    <form action="metodos/insert.php" method="post">
+    <form action="metodos/ConsultaCita.php" method="post">
         <p class="text-danger"><b>Rellene todos los campos</b></p>
 
         <div class="form-group">
@@ -110,7 +118,7 @@
         <div class="form-group">
             <label for="apellidos">Apellidos *</label>
             <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Escribe tu apellido paterno y materno" required>
-            <small class="form-text text-muted">Coloca tus apellidos.</small>
+       
         </div>
 
         <div class="form-group">
@@ -157,6 +165,7 @@
         </div>
         <input type="hidden" name="estado" value="Pendiente">
         <input type="hidden" name="oculto" value="1">
+
         <button type="reset" class="btn btn-warning">Limpiar</button>
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
@@ -192,6 +201,5 @@
             document.getElementById("fecha").addEventListener("change", validarFecha);
         });
     </script>
-
 </body>
 </html>

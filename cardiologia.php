@@ -52,7 +52,7 @@
             </p>
         </div>
     </div>
-    <!-- Equipo Medico -->
+   
 
     <div class="servicios-content container">
         <div class="servicios-txt">
@@ -112,33 +112,15 @@
     </div>
 
 
-    <!-- Boton para las reservas -->
     <button style="display: block; margin: 0 auto; padding: 15px 30px; font-size: 18px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" onclick="location.href='DAL/reserva.php'">Reservar</button>
 
     <footer class="footer" style="background-color: #fafafa; height: 260px">
-        <!--         <div class="footer-content-container">
-
-            <div class="link">
-                <a href="#" class="logo">logo</a>
-            </div>
-
-            <div class="link">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-
-        </div> -->
+    
 
     </footer>
 
     <?php
-    //include("send.php");
-    /* require_once 'DAL/consulta.php';
-    testConectar(); */
+  
     ?>
 
 

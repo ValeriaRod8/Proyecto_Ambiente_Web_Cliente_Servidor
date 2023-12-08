@@ -90,29 +90,12 @@
 
 
     <footer class="footer" style="background-color: #fafafa; height: 260px">
-        <!--         <div class="footer-content-container">
-
-            <div class="link">
-                <a href="#" class="logo">logo</a>
-            </div>
-
-            <div class="link">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-
-        </div> -->
+ 
 
     </footer>
 
     <?php
-    //include("send.php");
-    /* require_once 'DAL/consulta.php';
-    testConectar(); */
+ 
     ?>
 
 

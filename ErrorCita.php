@@ -15,9 +15,9 @@
                 <h4 class="alert-heading">CITA REGISTRADA</h4>
 
                 <?php
-                // Verificar si se enviaron datos del formulario
+             
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    // Recuperar datos del formulario
+      
                     $nombre = $_POST["nombre"];
                     $apellidos = $_POST["apellidos"];
                     $correo = $_POST["correo"];
@@ -26,7 +26,6 @@
                     $hora = $_POST["hora"];
                     $mensaje = $_POST["mensaje"];
 
-                    // Mostrar la información en la alerta
                     echo "<p><strong>Nombre:</strong> $nombre</p>";
                     echo "<p><strong>Apellidos:</strong> $apellidos</p>";
                     echo "<p><strong>Correo:</strong> $correo</p>";
@@ -40,7 +39,7 @@
                 ?>
 
                 <hr>
-                <a href="form_insert.php" class="btn btn-warning">Regresar</a>
+                <a href="Citas.php" class="btn btn-warning">Regresar</a>
             </div>
         </div>
     </div>
