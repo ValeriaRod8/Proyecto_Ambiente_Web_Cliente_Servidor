@@ -127,24 +127,23 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2 active" href="consultas.php">
                                     <svg class="bi">
                                         <use xlink:href="#file-earmark" />
                                     </svg>
                                     Consultas
                                 </a>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="reservas.php">
+                                <a class="nav-link d-flex align-items-center gap-2 active" href="#">
                                     <svg class="bi">
                                         <use xlink:href="#file-earmark" />
                                     </svg>
                                     Reservas
                                 </a>
                             </li>
-                            
                         </ul>
-                        
 
                         <hr class="my-3">
 
@@ -164,53 +163,52 @@
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h2 class="h2" id="tituloConsultas">Consultas</h2>
-                    <button class="btn btn-primary" id="botonMostrar" type="button" onclick="mostrarForm()">Nueva Consulta</button>
+                    <h2 class="h2" id="tituloReservas">Reservas</h2>
+                    <button class="btn btn-primary" id="botonMostrar" type="button" onclick="mostrarForm()">Nueva Reserva</button>
                 </div>
-                <div class="table-responsive small" id="tablaConsultas">
+                <div class="table-responsive small" id="tablaReservas">
                     <?php
-                    require_once "../DAL/consultas/consulta.php";
+                    require_once "../DAL/procesar_reserva.php";
 
-                    $query = "select id, nombre, telefono, correo, detalle from consultas";
-                    $consultas = getArrayConsulta($query);
+                    $query = "select id, nombre, telefono, correo, fecha, servicio from reserva";
+                    $reservas = getArrayReserva($query);
 
-                    if (!empty($consultas)) {
+                    if (!empty($reservas)) {
                         echo "<table class='table table-hover'";
                         echo "<thead>";
                         echo "<tr>";
                         echo "<th scope='col'>Nombre</th>";
                         echo "<th scope='col'>Telefono</th>";
                         echo "<th scope='col'>Correo</th>";
-                        echo "<th scope='col'>Detalle</th>";
+                        echo "<th scope='col'>Fecha</th>";
+                        echo "<th scope='col'>Servicio</th>";
                         echo "<th scope='col'>Acciones</th>";
                         echo "</tr>";
                         echo "</thead>";
-                        foreach ($consultas  as $consulta) {
-                            echo "<tr data-id=" . $consulta['id'] . ">";
-                            echo "<td>" . $consulta['nombre'] . "</td>";
-                            echo "<td>" . $consulta['telefono'] . "</td>";
-                            echo "<td>" . $consulta['correo'] . "</td>";
-                            echo "<td>" . $consulta['detalle'] . "</td>";
+                        foreach ($reservas  as $reserva) {
+                            echo "<tr data-id=" . $reserva['id'] . ">";
+                            echo "<td>" . $reserva['nombre'] . "</td>";
+                            echo "<td>" . $reserva['telefono'] . "</td>";
+                            echo "<td>" . $reserva['correo'] . "</td>";
+                            echo "<td>" . $reserva['fecha'] . "</td>";
+                            echo "<td>" . $reserva['servicio'] . "</td>";
                             echo
                             "<td>
-                                <button type='button' class='btn btn-outline-warning'>
-                                    <a style='text-decoration: none; color: inherit;' href='./modificarConsulta.php?id=" . $consulta['id'] . "'>Actualizar</a>
-                                </button>
-                        
-                                <button type='button' class='btn btn-outline-danger' data-bs-toggle='modal' data-bs-target='#modalEliminar" . $consulta['id'] . "'>Eliminar</button>
-                                <div class='modal fade' id='modalEliminar" . $consulta['id'] . "' tabindex='-1'>
+                                <button class='btn btn-outline-warning' onclick='actualizarReserva(\"actualizarReserva\", " . $reserva['id'] . ")'>Actualizar</button>
+                                <button type='button' class='btn btn-outline-danger' data-bs-toggle='modal' data-bs-target='#modalEliminar" . $reserva['id'] . "'>Eliminar</button>
+                                <div class='modal fade' id='modalEliminar" . $reserva['id'] . "' tabindex='-1'>
                                     <div class='modal-dialog modal-dialog-centered'>
                                         <div class='modal-content'>
                                             <div class='modal-header'>
-                                                <h5 class='modal-title'>Eliminar Consulta</h5>
+                                                <h5 class='modal-title'>Eliminar Reserva</h5>
                                                 <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
                                             </div>
                                             <div class='modal-body d-flex justify-content-center'>
-                                                <p style='font-size: 1.2rem';>¿Seguro de Eliminar la Consulta de <strong>" . $consulta['nombre'] . "</strong>?</p>
+                                                <p style='font-size: 1.2rem';>¿Seguro de Eliminar la Reserva de <strong>" . $reserva['nombre'] . "</strong>?</p>
                                             </div>
                                             <div class='modal-footer'>
                                                 <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
-                                                <button class='btn btn-danger' data-bs-dismiss='modal' onclick='eliminarConsulta(\"eliminarConsulta\", " . $consulta['id'] . ")'>Eliminar</button>
+                                                <button class='btn btn-danger' data-bs-dismiss='modal' onclick='eliminarReserva(\"eliminarReserva\", " . $reserva['id'] . ")'>Eliminar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -220,41 +218,54 @@
                         }
                         echo "</table>";
                     } else {
-                        echo "<h2>No hay Consultas</h2>";
+                        echo "<h2>No hay Reservas</h2>";
                     }
-
-
                     ?>
                 </div>
-                <form class="row" id="formConsultas" method="post" action="../DAL/consultas/crearConsulta.php" style="display: none;">
-                    <div class="row">
-                        <div class="form-input-sm mt-3">
-                            <label for="inputNombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="inputNombre" name="inputNombre" required>
-                        </div>
-                        <div class="form-input-sm mt-3">
-                            <label for="inputTelefono" class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" id="inputTelefono" name="inputTelefono" required>
-                        </div>
+                
+                <form class="row g-3" id="formReservas" method="post" action="../DAL/crearReserva.php" autocomplete="off" style="display: none;">
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required class="form-control">
                     </div>
-                    <div class="form-input-lg mt-3">
-                        <label for="inputCorreo" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="inputCorreo" name="inputCorreo" required>
+
+                    <div class="col-md-6">
+                        <label for="telefono" class="form-label">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required class="form-control">
                     </div>
-                    <div class="form-input-lg mt-3">
-                        <label for="inputDetalle" class="form-label">Detalle de la Consulta</label>
-                        <textarea class="form-control" id="inputDetalle" name="inputDetalle" rows="3" required></textarea>
+
+                    <div class="col-md-6">
+                        <label for="correo" class="form-label">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" required class="form-control">
                     </div>
+
+                    <div class="col-md-6">
+                        <label for="fecha" class="form-label">Fecha:</label>
+                        <input type="date" id="fecha" name="fecha" required class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="servicio" class="form-label">Servicio:</label>
+                        <select id="servicio" name="servicio" required class="form-select">
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="pediatria">Pediatría</option>
+                            <option value="ginecologia">Ginecologia</option>
+                            <option value="dermartologia">Dermartologia</option>
+                            <option value="cardiologia">Cardiologia</option>
+                        </select>
+                    </div>
+
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary mt-5" name="consultaAdmin">Crear Consulta</button>
+                        <button type="submit" class="btn btn-primary" name="reservaAdmin">Reservar</button>
                     </div>
                 </form>
+
             </main>
         </div>
     </div>
     <script src="../assets/js/jquery-3.5.1.js"></script>
     <script src="../assets/js/admin.js"></script>
-    <script src="../assets/js/consultas.js"></script>
+    <script src="../assets/js/reserva.js"></script>
 </body>
 
 </html>

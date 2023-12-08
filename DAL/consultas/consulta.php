@@ -1,6 +1,6 @@
 <?php
 
-require_once "conexion.php";
+require_once "../DAL/conexion.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_REQUEST['request'])) {
@@ -35,6 +35,34 @@ function crearConsulta($pNombre, $pCorreo, $pTelefono, $pDetalle)
             if ($stmt->execute()) {
                 $retorno = true;
             }
+        }
+    } catch (\Throwable $th) {
+        echo $th;
+    } finally {
+        Desconecta($oConexion);
+    }
+
+    return $retorno;
+}
+
+function actualizarConsulta($pIdConsulta)
+{
+    $retorno = false;
+
+    try {
+        $oConexion = Conecta();
+
+        if (mysqli_set_charset($oConexion, "utf8")) {
+            $stmt = $oConexion->prepare("update from consultas where id = ?");
+            $stmt->bind_param("i", $idConsulta);
+
+            $idConsulta = $pIdConsulta;
+
+            if ($stmt->execute()) {
+                $retorno = true;
+            }
+
+            $stmt->close();
         }
     } catch (\Throwable $th) {
         echo $th;

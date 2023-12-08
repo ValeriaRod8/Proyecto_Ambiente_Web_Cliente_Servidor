@@ -10,16 +10,16 @@ function mostrarForm() {
 
     if (table.style.display === "block" || table.style.display === "") {
         // Mostrar el formulario
-        title.textContent = "Nueva Consulta";
-        button.textContent = "Ver Consultas";
+        title.textContent = "Nueva Cita";
+        button.textContent = "Ver citas";
         table.style.display = "none";
         form.style.display = "block";
         button.classList.remove("btn-primary");
         button.classList.add("btn-success");
     } else {
         // Mostrar la tabla
-        title.textContent = "Consultas";
-        button.textContent = "Nueva Consulta";
+        title.textContent = "Citas";
+        button.textContent = "Nueva Cita";
         table.style.display = "block";
         form.style.display = "none";
         button.classList.remove("btn-success");
@@ -27,10 +27,10 @@ function mostrarForm() {
     }
 }
 
-function eliminarConsulta(request, id) {
+function eliminarCita(request, id) {
     $.ajax({
         type: 'POST',
-        url: '../DAL/consultas/consulta.php',
+        url: '../DAL/citas/citas.php',
         data: { request: request, id: id },
         success: function (response) {
             //Eliminar la fila de la tabla

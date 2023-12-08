@@ -3,7 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_POST['consultaUsuario']) || isset($_POST['consultaAdmin'])) {
     try {
-      require_once "../include/functions/recoge.php";
+      require_once "../../include/functions/recoge.php";
       $nombre = recogePost("inputNombre");
       $telefono = recogePost("inputTelefono");
       $correo = recogePost("inputCorreo");
@@ -13,9 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         require_once "consulta.php";
         if (crearConsulta($nombre, $telefono, $correo, $detalle)) {
           if (isset($_POST['consultaUsuario'])) {
-            header('Location: ../index.php');
+            header('Location: ../../index.php');
           } elseif (isset($_POST['consultaAdmin'])) {
-            header('Location: ../admin/consultas.php');
+            header('Location: ../../admin/consultas.php');
           }
         }
       }
