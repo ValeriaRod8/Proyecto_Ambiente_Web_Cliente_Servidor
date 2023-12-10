@@ -60,8 +60,6 @@
                  donde te sientas escuchado y comprendido en cada visita. No solo tratamos enfermedades; promovemos la prevención y la educación para empoderarte en la toma de decisiones informadas sobre tu salud. 
                  Creemos en la importancia de establecer una relación de confianza a largo plazo contigo y tu familia.
                  
-
-                PRUEBA DE GITHUB
             </p>
         </div>
     </section>

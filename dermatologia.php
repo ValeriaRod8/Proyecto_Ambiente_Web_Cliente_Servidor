@@ -40,15 +40,11 @@
     <div class="servicios-content container">
         <div class="servicios-txt">
             <h2 style="text-align: center;">Dermatologia</h2>
-            <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+            <p>Ofrecemos una amplia gama de servicios dermatológicos, incluyendo el tratamiento de enfermedades de la piel, procedimientos cosméticos, cirugía dermatológica y terapias avanzadas. Ya sea que necesites tratamiento para el acné, la detección de cáncer de piel o procedimientos estéticos, estamos aquí para ayudarte.
             </p>
         </div>
     </div>
- 
+
 
     <div class="servicios-content container">
         <div class="servicios-txt">
@@ -58,7 +54,7 @@
                     <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
                     <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
                 </div>
-                <p style="font-size: 16px; text-align: left;">psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
+                <p style="font-size: 16px; text-align: left;"> psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
                     is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
@@ -71,16 +67,13 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
+            <h2 style="text-align: left;">Enfoque en la Prevención:</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
                     <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
                     <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
                 </div>
-                <p style="font-size: 16px; text-align: left;">psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+                <p style="font-size: 16px; text-align: left;">Abogamos por la prevención y la educación sobre el cuidado de la piel. Además de tratar afecciones existentes, trabajamos contigo para establecer rutinas de cuidado de la piel y proporcionar información sobre la protección solar y prácticas saludables para mantener la salud de tu piel a largo plazo.
                 </p>
             </div>
         </div>
@@ -89,17 +82,20 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
+            <h2 style="text-align: left;">Ambiente de Cuidado:</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
                     <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
                     <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
                 </div>
-                <p style="font-size: 16px; text-align: left;">psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
-                </p>
+                <p style="font-size: 16px; text-align: left;">Creamos un entorno acogedor y profesional para que te sientas cómodo durante tus visitas. Nuestro objetivo es hacer que cada consulta sea una experiencia positiva, donde puedas discutir tus preocupaciones y recibir el mejor cuidado dermatológico disponible.
+
+                    <br> <br>
+                    Confía en nosotros para proporcionarte la atención de dermatología experta y compasiva que tu piel merece. Estamos aquí para ayudarte a alcanzar y mantener una piel saludable y radiante.
+
+                    <br> <br>
+                    Tu piel, nuestra prioridad.
+                </p>S
             </div>
         </div>
     </div>
