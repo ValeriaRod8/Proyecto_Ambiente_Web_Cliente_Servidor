@@ -34,7 +34,7 @@
                 <p>En el Consultorio nos complace darte la más cordial bienvenida. Estamos comprometidos a proporcionarte la mejor atención médica para cuidar de tu salud y bienestar. 
                     Nuestros servicios profesionales médicos están aquí para ofrecerte servicios de calidad y personalizados.
                 </p>
-                <a href="nosotros.php" class="btn-1">Informacion</a>
+                <a href="nosotros.php" class="btn-1">Información</a>
             </div>
             <div class="header-img">
                 <img src="assets/img/left.png" alt="">
