@@ -5,7 +5,7 @@ if (!isset($_POST['oculto'])) {
 }
 
 
-include '../DAL/conexion1.php';
+include '../DAL/conexionCita.php';
 
 
 $nombre = $_POST['nombre'];
@@ -18,7 +18,7 @@ $mensaje = $_POST['mensaje'];
 $estado = $_POST['estado'];
 
 
-$consulta = $db->prepare("SELECT COUNT(*) FROM reservas WHERE fecha = ? AND hora = ?");
+$consulta = $db->prepare("SELECT COUNT(*) FROM citas WHERE fecha = ? AND hora = ?");
 $consulta->execute([$fecha, $hora]);
 $existeCita = $consulta->fetchColumn();
 
@@ -27,7 +27,7 @@ if ($existeCita > 0) {
     echo 'Espacio ocupado.';
 } else {
 
-    $sentencia = $db->prepare("INSERT INTO reservas(nombre, apellidos, correo, servicio, fecha, hora, mensajeadicional, estado)
+    $sentencia = $db->prepare("INSERT INTO citas(nombre, apellidos, correo, servicio, fecha, hora, mensajeadicional, estado)
     VALUES(?,?,?,?,?,?,?,?)");
     
     if ($sentencia->execute([$nombre, $apellidos, $correo, $servicio, $fecha, $hora, $mensaje, $estado])) {
