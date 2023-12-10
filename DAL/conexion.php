@@ -2,8 +2,8 @@
 
 function Conecta() {
     $server = "localhost";
-    $user = "root";
-    $password = "";
+    $user = "vale";
+    $password = "valeria123";
     $dataBase = "consultorio";
 
     //1. Establecer la conexion mysqli

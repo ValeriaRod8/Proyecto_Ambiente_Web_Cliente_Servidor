@@ -132,13 +132,20 @@
                                     Consultas
                                 </a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2" href="reservas.php">
                                     <svg class="bi">
                                         <use xlink:href="#file-earmark" />
                                     </svg>
                                     Reservas
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-2" href="citas.php">
+                                    <svg class="bi">
+                                        <use xlink:href="#file-earmark" />
+                                    </svg>
+                                    Citas
                                 </a>
                             </li>
                         </ul>

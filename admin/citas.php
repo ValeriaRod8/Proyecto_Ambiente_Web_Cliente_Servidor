@@ -119,37 +119,37 @@
                     <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="admin.php">
-                                    <svg class="bi">
-                                        <use xlink:href="#house-fill" />
-                                    </svg>
-                                    Dashboard
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active" href="consultas.php">
-                                    <svg class="bi">
-                                        <use xlink:href="#file-earmark" />
-                                    </svg>
-                                    Consultas
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active" href="#">
-                                    <svg class="bi">
-                                        <use xlink:href="#file-earmark" />
-                                    </svg>
-                                    Reservas
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="citas.php">
-                                    <svg class="bi">
-                                        <use xlink:href="#file-earmark" />
-                                    </svg>
-                                    Citas
-                                </a>
-                            </li>
+                                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="admin.php">
+                                        <svg class="bi">
+                                            <use xlink:href="#house-fill" />
+                                        </svg>
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center gap-2 active" href="consultas.php">
+                                        <svg class="bi">
+                                            <use xlink:href="#file-earmark" />
+                                        </svg>
+                                        Consultas
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center gap-2 active" href="#">
+                                        <svg class="bi">
+                                            <use xlink:href="#file-earmark" />
+                                        </svg>
+                                        Reservas
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center gap-2" href="citas.php">
+                                        <svg class="bi">
+                                            <use xlink:href="#file-earmark" />
+                                        </svg>
+                                        Citas
+                                    </a>
+                                </li>
                         </ul>
 
                         <hr class="my-3">
@@ -170,8 +170,8 @@
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h2 class="h2" id="tituloConsultas">Consultas</h2>
-                    <button class="btn btn-primary" id="botonMostrar" type="button" onclick="mostrarFormCrear()">Nueva Consulta</button>
+                    <h2 class="h2" id="tituloConsultas">Citas</h2>
+                    <button class="btn btn-primary" id="botonMostrar" type="button" onclick="mostrarFormCrear()">Nueva Cita</button>
                 </div>
                 <div class="table-responsive small" id="tablaConsultas">
                     <?php
@@ -225,40 +225,53 @@
                     } else {
                         echo "<h2>No hay Consultas</h2>";
                     } */
-
-
                     ?>
+
                 </div>
-                <form class="row" id="formConsultas" method="post" action="../DAL/crearConsulta.php" style="display: none;">
+                <form class="row" id="formConsultas" method="post" action="../DAL/crearCita.php" style="display: none;">
                     <div class="row">
                         <div class="form-input-sm mt-3">
-                            <label for="inputNombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="inputNombre" name="inputNombre" required>
+                            <label for="inputEspecialista" class="form-label">Especialista</label>
+                            <input type="text" class="form-control" id="inputEspecialista" name="inputEspecialista" required>
                         </div>
                         <div class="form-input-sm mt-3">
-                            <label for="inputTelefono" class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" id="inputTelefono" name="inputTelefono" required>
+                            <label for="inputCorreoEspecialista" class="form-label">Correo del Especialista</label>
+                            <input type="email" class="form-control" id="inputCorreoEspecialista" name="inputCorreoEspecialista" required>
                         </div>
                     </div>
                     <div class="form-input-lg mt-3">
-                        <label for="inputCorreo" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="inputCorreo" name="inputCorreo" required>
+                        <label for="inputCorreoCliente" class="form-label">Correo del Cliente</label>
+                        <input type="email" class="form-control" id="inputCorreoCliente" name="inputCorreoCliente" required>
                     </div>
                     <div class="form-input-lg mt-3">
-                        <label for="inputDetalle" class="form-label">Detalle de la Consulta</label>
-                        <textarea class="form-control" id="inputDetalle" name="inputDetalle" rows="3" required></textarea>
+                        <label for="inputEspecialidad" class="form-label">Especialidad</label>
+                        <input type="text" class="form-control" id="inputEspecialidad" name="inputEspecialidad" required>
+                    </div>
+                    <div class="form-input-lg mt-3">
+                        <label for="inputDescripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="inputDescripcion" name="inputDescripcion" rows="3" required></textarea>
+                    </div>
+                    <div class="form-input-lg mt-3">
+                        <label for="inputFecha" class="form-label">Fecha</label>
+                        <input type="datetime-local" class="form-control" id="inputFecha" name="inputFecha" required>
+                    </div>
+                    <div class="form-input-lg mt-3">
+                        <label for="inputNotas" class="form-label">Notas</label>
+                        <textarea class="form-control" id="inputNotas" name="inputNotas" rows="3" required></textarea>
                     </div>
                     <div class="col-12">
                         <input type="hidden" id="inputId" name="inputId">
-                        <button type="submit" class="btn btn-primary mt-5" id="botonFormulario" name="consultaAdmin">Crear Consulta</button>
+                        <button type="submit" class="btn btn-primary mt-5" id="botonFormulario" name="consultaAdmin">Crear Cita</button>
                     </div>
+
                 </form>
+
             </main>
         </div>
     </div>
     <script src="../assets/js/jquery-3.5.1.js"></script>
     <script src="../assets/js/admin.js"></script>
-    <script src="../assets/js/consultas.js"></script>
+    <script src="../assets/js/citas.js"></script>
 </body>
 
 </html>
