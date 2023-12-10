@@ -35,37 +35,51 @@
     <div class="nosotros-content container">
         <div class="nosotros-txt">
             <h2 style="text-align: left;">Sobre Nosotros</h2>
-            <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+            <p>Nuestra misión es simple pero poderosa: mejorar la salud y el bienestar de nuestra comunidad. Con años de experiencia en el campo de la medicina,
+                nuestro equipo médico altamente calificado se esfuerza por ofrecer un enfoque integral y compasivo para la atención médica.
+                Nuestro objetivo es ayudar a nuestros pacientes a mantenerse saludables y sentirse mejor, y estamos aquí para ayudarlo a lograrlo.
+
             </p>
         </div>
     </div>
 
     <div class="nosotros-content container">
         <div class="nosotros-txt">
-            <h2 style="text-align: left;">Mision</h2>
-            <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque!
-                Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+            <h2 style="text-align: left;">Misión</h2>
+            <p> Nuestra misión va más allá de ser un proveedor de servicios médicos; es un compromiso profundo con tu salud y bienestar integral.
+                Nuestra misión es guiar a cada paciente hacia una vida más saludable, brindando atención médica personalizada, accesible y centrada en el individuo.
+                <br> <br>
+                1. Atención Centrada en el Paciente:
+                Nos esforzamos por ofrecer una atención médica que va más allá de los síntomas, centrándonos en la persona en su totalidad. Escuchamos, comprendemos y colaboramos contigo para desarrollar planes de tratamiento adaptados a tus necesidades específicas.
+
+                <br> <br>
+                2. Accesibilidad y Compromiso:
+                Nos comprometemos a proporcionar servicios médicos accesibles a todas las personas, sin importar su situación. Buscamos eliminar las barreras para el acceso a la atención médica,
+                garantizando que cada individuo tenga la oportunidad de recibir cuidados de calidad cuando lo necesite.
+
+                <br> <br>
+                Tu salud, nuestra misión.
+
             </p>
         </div>
     </div>
 
     <div class="nosotros-content container">
         <div class="nosotros-txt">
-            <h2 style="text-align: left;">Vision</h2>
-            <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque!
-                Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+            <h2 style="text-align: left;">Visión</h2>
+            <p>No solo aspiramos a ser un centro de atención médica, sino a ser un faro de salud y bienestar en nuestra comunidad. Nuestra visión se basa en un compromiso apasionado con la excelencia clínica,
+                la innovación y el impacto positivo en la vida de quienes confían en nosotros.
+
+                <br> <br>
+                1. Excelencia Clínica:
+                Buscamos ser reconocidos como líderes en la prestación de servicios médicos de calidad. Desde el diagnóstico preciso hasta el tratamiento efectivo, nos esforzamos por superar las expectativas, adoptando prácticas clínicas avanzadas y manteniendo los más altos estándares de atención.
+                <br> <br>
+                2. Innovación Continua:
+                Abrazamos la innovación como un medio para avanzar en la atención médica. Buscamos constantemente tecnologías y enfoques médicos emergentes para mejorar la eficiencia y la precisión en nuestros servicios, garantizando que nuestros pacientes reciban lo último en atención médica de vanguardia.
+
+                <br> <br>
+                3. Relación de Confianza:
+                Imaginamos un ambiente donde la confianza sea el pilar fundamental de nuestra relación con los pacientes. Queremos ser tu socio de confianza en el cuidado de la salud, proporcionando orientación personalizada y apoyo continuo a lo largo de tu viaje hacia el bienestar.
             </p>
         </div>
     </div>
@@ -90,12 +104,12 @@
 
 
     <footer class="footer" style="background-color: #fafafa; height: 260px">
- 
+
 
     </footer>
 
     <?php
- 
+
     ?>
 
 

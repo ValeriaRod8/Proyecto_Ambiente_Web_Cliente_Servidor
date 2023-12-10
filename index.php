@@ -30,11 +30,9 @@
         </div>
         <div class="header-content container">
             <div class="header-txt">
-                <h1>Consultorio Medical</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo
-                    veritatis id quis mollitia quas
-                    qui deserunt harum, nisi ratione odit repellat eum!
+                <h1>Consultorio Pie Salud</h1>
+                <p>En el Consultorio nos complace darte la más cordial bienvenida. Estamos comprometidos a proporcionarte la mejor atención médica para cuidar de tu salud y bienestar. 
+                    Nuestros servicios profesionales médicos están aquí para ofrecerte servicios de calidad y personalizados.
                 </p>
                 <a href="nosotros.php" class="btn-1">Informacion</a>
             </div>
@@ -49,28 +47,19 @@
         </div>
         <div class="about-txt">
             <h2>¿Quienes Somos?</h2>
-            <p> psum dolor sit amet consectetur adipisicing elit.
-                Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia
-                quas qui deserunt harum,
-                nisi ratione odit repellat eum!
-                orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia
-                quas qui deserunt harum,
-                nisi ratione odit repellat eum!
+            <p> Nos enorgullece presentarnos como tu aliado en el cuidado integral de la salud. Somos un equipo dedicado de profesionales comprometidos con proporcionar
+                servicios médicos de calidad y brindar atención personalizada a cada uno de nuestros pacientes.
+                Nuestra misión es simple pero poderosa: mejorar la salud y el bienestar de nuestra comunidad. Con años de experiencia en el campo de la medicina,
+                nuestro equipo médico altamente calificado se esfuerza por ofrecer un enfoque integral y compasivo para la atención médica.
+                Nuestro objetivo es ayudar a nuestros pacientes a mantenerse saludables y sentirse mejor, y estamos aquí para ayudarlo a lograrlo.
+
+            
             </p>
             <br>
-            <p>ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia
-                quas qui deserunt harum,
-                nisi ratione odit repellat eum!
-                orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia
-                quas qui deserunt harum,
-                nisi ratione odit repellat eum!
+            <p> Lo que nos distingue es nuestro compromiso con la excelencia, la empatía y la atención centrada en el paciente. Nos esforzamos por crear un ambiente cálido y acogedor
+                 donde te sientas escuchado y comprendido en cada visita. No solo tratamos enfermedades; promovemos la prevención y la educación para empoderarte en la toma de decisiones informadas sobre tu salud. 
+                 Creemos en la importancia de establecer una relación de confianza a largo plazo contigo y tu familia.
+                 
 
                 PRUEBA DE GITHUB
             </p>
