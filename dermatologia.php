@@ -15,8 +15,8 @@
     <header class="header-nosotros">
 
         <div class="menu container">
-            <a href="index.php">
-                <img src="logo.png" alt="Logo">
+            <a href="index.php" class="logo">
+                <img style="margin-top: 10px;" src="assets/img/logo.png" height="60px" width="100px" alt="Logo">
             </a>
             <nav class="navbar">
                 <ul>

@@ -86,7 +86,7 @@
     <header class="header">
         <div class="menu container">
             <a href="index.php" class="logo">
-                <img src="logo.png" alt="Logo">
+                <img style="margin-top: 10px;" src="assets/img/logo.png" height="60px" width="100px" alt="Logo">
             </a>
 
             <input type="checkbox" id="menu" />
