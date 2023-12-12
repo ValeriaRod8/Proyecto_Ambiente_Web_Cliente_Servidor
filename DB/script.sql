@@ -77,7 +77,7 @@ PRIMARY KEY (codigo)) ENGINE = InnoDB;
 INSERT INTO `consultorio`.`productos` (`nombre`, `detalle`, `imagen`, `precio`) VALUES 
 ('Tensiometro', 'Presion Arterial', 'https://imagenes.elpais.com/resizer/qI6eaz2Hrt4IPLPNGIExmxbAIR8=/1960x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/7PX5V67QOVAJ7BSPHWALYTBSLE.png', 59.99),
 ('Glucometro', 'Medir Azucar en sangre', 'https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2022/10/27/635a8e958741d.png', 29.99),
-('Paracetamol', 'Analgesico', 'https://statics-cuidateplus.marca.com/cms/styles/ratio_1_1/azblob/2022-09/blister-paracetamol.jpg.webp?itok=iBdn6prc', 7.99),
+('Paracetamol', 'Analgesico', 'https://paracetamol.bayer.com.ar/sites/g/files/vrxlpx30376/files/2022-10/PACK%20PARACETAMOL%20BAYER.png?imwidth=5000', 7.99),
 ('Antigripal', 'Tratamiento de la gripe', 'https://walmartcr.vtexassets.com/arquivos/ids/354891/Antigripal-Chinoin-Antifludes-M-s-12-Tabletas-1-27079.jpg?v=638019853163870000', 9.99);
 
 CREATE TABLE `consultorio`.`facturas` 
