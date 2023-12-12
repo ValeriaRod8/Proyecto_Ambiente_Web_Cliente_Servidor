@@ -21,8 +21,8 @@ $(document).ready(function () {
         });
 
         let botonesCarrito = $(`<div class="carrito__buttons">
-            <div><input class="carrito__confirmar" type="button" name="confirmar" id="confirmar" value="Confirmar Compra"></div>      
-            <div><input class="carrito__limpiar" type="button" name="limpiar" id="limpiar" value="Limpiar Carrito"></div>
+            <div><input class="carrito__confirmar" type="button" name="confirmar" id="confirmar" value="Confirmar"></div>      
+            <div><input class="carrito__limpiar" type="button" name="limpiar" id="limpiar" value="Limpiar"></div>
             </div>`);
 
         carritoContainer.append(botonesCarrito);
