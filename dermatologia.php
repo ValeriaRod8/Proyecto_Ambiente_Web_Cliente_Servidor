@@ -48,17 +48,12 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: left;">Equipo Medico</h2>
+            <h2 style="text-align: left;">Equipo Médico</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-                    <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
+                <img src="assets/img/doctora.jpg" alt="Imagen Doctora"height="250px" width="400px">
                 </div>
-                <p style="font-size: 16px; text-align: left;"> psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+                <p style="font-size: 16px; text-align: left;"> Ofrecmos una atención adecuada para en el cuidado de la piel, desde el acné hasta el cáncer de piel y todo lo demás. Nuestros dermatólogos están capacitados para evaluar y tratar una amplia gama de afecciones de la piel, incluidas las más comunes, como el acné, el eczema y la psoriasis, así como las más raras. Nuestros dermatólogos también están capacitados para evaluar y tratar el cáncer de piel, incluido el melanoma, el tipo más grave de cáncer de piel.
                 </p>
             </div>
         </div>
@@ -67,10 +62,10 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: left;">Enfoque en la Prevención:</h2>
+            <h2 style="text-align: left;">Enfoque en la Prevención</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-                    <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
+                <img src="assets/img/vista.jpg" alt="Imagen Doctora"height="350px" width="400px">
                     <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
                 </div>
                 <p style="font-size: 16px; text-align: left;">Abogamos por la prevención y la educación sobre el cuidado de la piel. Además de tratar afecciones existentes, trabajamos contigo para establecer rutinas de cuidado de la piel y proporcionar información sobre la protección solar y prácticas saludables para mantener la salud de tu piel a largo plazo.
@@ -82,11 +77,10 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: left;">Ambiente de Cuidado:</h2>
+            <h2 style="text-align: left;">Ambiente de Cuidado</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-                    <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
+                <img src="assets/img/prevencion.jpg" alt="Imagen Prevencion"height="250px" width="400px">
                 </div>
                 <p style="font-size: 16px; text-align: left;">Creamos un entorno acogedor y profesional para que te sientas cómodo durante tus visitas. Nuestro objetivo es hacer que cada consulta sea una experiencia positiva, donde puedas discutir tus preocupaciones y recibir el mejor cuidado dermatológico disponible.
 

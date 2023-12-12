@@ -52,7 +52,7 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: left;">Equipo Médico:</h2>
+            <h2 style="text-align: left;">Equipo Médico</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
                 <img src="assets/img/doctores.jpg" alt="Imagen Doctores"height="250px" width="450px">
@@ -67,7 +67,7 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: left;">Nuestro Compromiso:</h2>
+            <h2 style="text-align: left;">Nuestro Compromiso</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
                 <img src="assets/img/padres.jpg" alt="Imagen Pediatría"height="410px" width="400px">
@@ -82,7 +82,7 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: left;">Educación para Padres:</h2>
+            <h2 style="text-align: left;">Educación para Padres</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
                     <img src="assets/img/pediatra.png" alt="Imagen Pediatría"height="250px" width="400px">
