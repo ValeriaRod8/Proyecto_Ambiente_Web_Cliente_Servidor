@@ -87,16 +87,12 @@
     <div class="nosotros-content container">
         <div class="nosotros-txt">
             <h2 style="text-align: left;">Ubicación</h2>
-            <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque!
-                Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+            <p> Actualmente nos encontramos en la siguiente ubicación 'Entre Pie y Salud, 219, Provincia de Cartago, Cartago'. Si necesitan encontrarnos para llegar al lugar pueden ingresar por medio de Google Maps
+                y te traera al Consultorio. ¡No esperes mas, veni pronto!
             </p>
-            <div class="mapa-cuadro">
-                <a href="https://www.google.com/maps/place/Hospital+La+Cat%C3%B3lica/@9.9490601,-84.0613925,17z/data=!3m1!4b1!4m6!3m5!1s0x8fa0e47d57bfdbd5:0xbd8efb4b06725e69!8m2!3d9.9490548!4d-84.0588176!16s%2Fg%2F1tx482y_?entry=ttu" target="_blank">
-                    Ver en Google Maps
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15722.660828611783!2d-83.902166!3d9.8784296!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0df715e652f5d%3A0x602df262f606f51e!2sCentro%20Pie%20y%20Salud!5e0!3m2!1ses-419!2scr!4v1702350306356!5m2!1ses-419!2scr" width="100%" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                Ver en Google Maps
                 </a>
             </div>
         </div>

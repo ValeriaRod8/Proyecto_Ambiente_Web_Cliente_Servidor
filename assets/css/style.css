@@ -363,20 +363,12 @@ form h2 {
 }
 
 
-.mapa-cuadro {
-    background-color: #e0e0e0; /* Color de fondo del cuadro */
-    padding: 10px;
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center; /* Centra el contenido del cuadro */
-    margin: 0 auto; /* Añade margen automático para centrar el cuadro horizontalmente */
-    width: 50%; /* Ajusta el ancho del cuadro según tus necesidades */
+.mapa {
+    margin-top: 25px;
+    margin-bottom: 100px;
 }
 
-.mapa-cuadro a {
-    text-decoration: none;
-    color: #333; /* Color del texto del enlace */
-    font-weight: bold;
-}
+
 
 .imagen-cuadro {
     overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
