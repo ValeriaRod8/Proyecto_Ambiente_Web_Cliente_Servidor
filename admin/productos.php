@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
+    <title>Productos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/admin.css">
-    <link rel="stylesheet" href="../assets/css/reservas.css">
+    <link rel="stylesheet" href="../assets/css/productos.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 
@@ -134,14 +134,6 @@
                                     Consultas
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active" href="#">
-                                    <svg class="bi">
-                                        <use xlink:href="#file-earmark" />
-                                    </svg>
-                                    Reservas
-                                </a>
-                            </li>
                         </ul>
 
                         <hr class="my-3">
@@ -162,56 +154,63 @@
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h2 class="h2" id="tituloReservas">Reservas</h2>
-                    <button class="btn btn-primary" id="botonMostrar" type="button" onclick="mostrarFormCrear()">Nueva Reserva</button>
+                    <h2 class="h2" id="tituloProductos">Productos</h2>
+                    <button class="btn btn-primary" id="botonMostrar" type="button" onclick="mostrarFormCrear()">Nuevo Producto</button>
                 </div>
-                <div class="table-responsive small" id="tablaReservas">
-                    <?php
-
-
-                    ?>
+                <div class="table-responsive small" id="tablaProductos">
+                   
                 </div>
-                <form class="row" id="formReservas" method="post" action="../DAL/crearReserva.php" style="display: none;">
+
+                <div class="form-container">
+                <form class="row" id="formProductos" method="post" action="../DAL/crearProducto.php" style="display: none;">
                     <div class="row">
+                    <input type="hidden" id="inputCodigo" name="inputCodigo">
                         <div class="form-input-sm mt-3">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            <label for="inputNombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="inputNombre" name="inputNombre" required>
                         </div>
                         <div class="form-input-sm mt-3">
-                            <label for="telefono">Teléfono:</label>
-                            <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                        <label for="inputDetalle" class="form-label">Detalle</label>
+                    <input type="text" class="form-control fs-3" id="inputDetalle" name="inputDetalle" required>
                         </div>
                     </div>
                     <div class="form-input-lg mt-3">
-                            <label for="correo">Correo electrónico:</label>
-                            <input type="email" class="form-control" id="correo" name="correo" required>
+                    <label for="inputPrecio" class="form-label">Precio</label>
+                    <input type="number" class="form-control fs-3" id="inputPrecio" name="inputPrecio" required>
                     </div>
                     <div class="form-input-lg mt-3">
-                            <label for="fecha">Fecha:</label>
-                            <input type="date" class="form-control" id="fecha" name="fecha" required>
+                        <label for="inputImagen" class="form-label">Imagen</label>
+                        <input type="file" class="form-control form-control-lg fs-3" name="inputImagen" id="inputImagen" accept="image/*" required>
+                        <div class="barra" style="display: none;">
+                            <div class="barra_azul" id="barra_estado">
+                                <span class="fs-3"></span>
+                            </div>
                     </div>
-                    <div class="form-input-lg mt-3">
-                        <label for="servicio">Servicio:</label>
-                            <select id="servicio" class="form-control" name="servicio" required>
-                                <option value="" disabled selected>Seleccione una opción</option>
-                                <option value="pediatria">Pediatría</option>
-                                <option value="ginecologia">Ginecologia</option>
-                                <option value="dermartologia">Dermartologia</option>
-                                <option value="cardiologia">Cardiologia</option>
-                            </select>
                     </div>
-
                     <div class="col-12">
+
                         <input type="hidden" id="inputId" name="inputId">
-                        <button type="submit" class="btn btn-primary mt-5" id="botonFormulario" name="reservaAdmin">Crear Reserva</button>
+                        <button type="submit" class="btn btn-primary mt-5" id="botonFormulario" name="crearProducto">Crear Producto</button>
                     </div>
                 </form>
+                </div>
+
+
             </main>
         </div>
     </div>
     <script src="../assets/js/jquery-3.5.1.js"></script>
     <script src="../assets/js/admin.js"></script>
-    <script src="../assets/js/reservas.js"></script>
+    <script src="../assets/js/productos.js"></script>
+    <script src="../assets/js/crearProducto.js"></script>
+    
+
+    
+
+
+
 </body>
 
 </html>
+
+                

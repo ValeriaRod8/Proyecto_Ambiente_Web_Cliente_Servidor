@@ -14,8 +14,8 @@
 
     <h1>Reservar Servicio</h1>
 
-    
-    <form method="post" action="crearReserva.php" autocomplete="off">
+
+    <form id="formReservas" method="post" action="../DAL/reservas/crearReserva.php" autocomplete="off">
     
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre" required>
@@ -47,7 +47,7 @@
         </div>
     </form>
 
-    <script src="js/reserva.js"></script>
+    <script src="../assets/js/reserva.js"></script>
 
 </body>
 

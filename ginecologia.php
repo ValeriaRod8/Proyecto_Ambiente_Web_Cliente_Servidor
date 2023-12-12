@@ -105,18 +105,8 @@
             </div>
         </div>
     </div>
-
-
   
     <button style="display: block; margin: 0 auto; padding: 15px 30px; font-size: 18px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" onclick="location.href='DAL/reserva.php'">Reservar</button>
-
-
-
-
-
-
-
-
 
     </div>
 

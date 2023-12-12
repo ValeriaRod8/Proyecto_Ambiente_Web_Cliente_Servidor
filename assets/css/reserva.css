@@ -1,14 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-}
 
-h1 {
-    text-align: center;
-    color: #333;
-}
 
 form {
     max-width: 600px;
@@ -22,6 +12,7 @@ form {
 label {
     display: block;
     margin-bottom: 8px;
+    font-size: 18px; /* Ajustar el tamaño de la fuente para las etiquetas */
 }
 
 input {
@@ -31,12 +22,14 @@ input {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px; /* Ajustar el tamaño de la fuente para los campos de entrada */
 }
 
 input[type="submit"] {
     background-color: #4caf50;
     color: #fff;
     cursor: pointer;
+    font-size: 18px; /* Ajustar el tamaño de la fuente para el botón de envío */
 }
 
 input[type="submit"]:hover {
@@ -49,13 +42,14 @@ input[type="submit"]:hover {
 }
 
 .regresar a {
-    color: #fff; /* Cambiado a color blanco */
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #3498db; /* Color azul */
+    background-color: #3498db;
     border-radius: 4px;
     display: inline-block;
+    font-size: 16px; /* Ajustar el tamaño de la fuente para el enlace de regreso */
 }
 
 .mensaje {
@@ -65,6 +59,7 @@ input[type="submit"]:hover {
     border-radius: 4px;
     text-align: center;
     margin-top: 20px;
+    font-size: 18px; /* Ajustar el tamaño de la fuente para el mensaje de éxito */
 }
 
 .error {
@@ -74,14 +69,15 @@ input[type="submit"]:hover {
     border-radius: 4px;
     text-align: center;
     margin-top: 20px;
+    font-size: 18px; /* Ajustar el tamaño de la fuente para el mensaje de error */
 }
 
 .servicio {
-width: 100%; 
-padding: 10px; 
-box-sizing: border-box; 
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .espacio-adicional {
-margin-bottom: 20px; 
+    margin-bottom: 20px;
 }

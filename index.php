@@ -36,6 +36,7 @@ if (isset($_GET['logout'])) {
                     <li><a href="pediatria.php">Servicios</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
                     <li><a href="Citas.php">Citas</a></li>
+                    <li><a href="productos.html">Tienda</a></li>
                     <?php
                     if (isset($_SESSION['login'])) {
                         echo '<li><a href="?logout">Cerrar Sesión</a></li>';

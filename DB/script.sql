@@ -56,6 +56,42 @@ CREATE TABLE citas (
     CURRENT_TIMESTAMP
 );
 
+CREATE TABLE `reserva` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `Nombre` varchar(100) NOT NULL,
+  `Telefono` INT NOT NULL,
+  `Correo` varchar(100) NOT NULL,
+  `Fecha` DATE NOT NULL,
+  `Servicio` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `consultorio`.`productos` 
+(`codigo` INT NOT NULL AUTO_INCREMENT , 
+`nombre` VARCHAR(100) NOT NULL , 
+`detalle` TEXT NOT NULL , 
+`imagen` VARCHAR(255) NOT NULL , 
+`precio` DOUBLE NOT NULL , 
+PRIMARY KEY (codigo)) ENGINE = InnoDB;
+
+CREATE TABLE `consultorio`.`facturas` 
+(`codigo` INT NOT NULL AUTO_INCREMENT , 
+`codigo_usuario` INT NOT NULL ,
+`username` VARCHAR(255) NOT NULL ,
+`total` DOUBLE NOT NULL ,
+`fecha_hora` DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL ,
+PRIMARY KEY (codigo) ,
+FOREIGN KEY (codigo_usuario) REFERENCES usuarios(Id)) ENGINE = InnoDB;
+
+CREATE TABLE `consultorio`.`lineas_facturas` 
+(`linea` INT NOT NULL ,
+`codigo_factura` INT NOT NULL ,
+`codigo_producto` INT NOT NULL ,
+`subtotal` DOUBLE NOT NULL ,
+PRIMARY KEY (linea, codigo_factura) ,
+FOREIGN KEY (codigo_factura) REFERENCES facturas(codigo) ,
+FOREIGN KEY (codigo_producto) REFERENCES productos(codigo)) ENGINE = InnoDB;
+
+
 /*Script Anterior, NO UTILIZAR PARA LA APLICACION*/
 /*CREATE DATABASE citas;
  

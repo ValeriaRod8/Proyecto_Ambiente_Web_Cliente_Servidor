@@ -40,8 +40,3 @@ function eliminarReserva(request, id) {
             console.error('Error en la solicitud AJAX:', error);
         }
     });}
-
-
-
-//FALTA EL ACTUALIZAR
-

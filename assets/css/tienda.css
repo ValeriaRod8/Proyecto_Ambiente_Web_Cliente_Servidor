@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+
+
+:root {
+    --primary: black;
+    --secondary: #ffae00;
+    --primaryBackground: #ffff;
+    --secondaryBackground: #f2f2f2;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    background-color: var(--primaryBackground);
+}
+
+.body__index {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Header*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem;
+    background-color: var(--secondaryBackground);
+}
+
+.header__logo {
+    height: 5rem;
+}
+
+.nav__item {
+    list-style: none;
+}
+
+.nav__link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-right: 1.25rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav__link:hover {
+    color: var(--secondary);
+}
+
+.nav__link--active {
+    color: var(--primary);
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+/*Main*/
+.main__content {
+    flex: 1;
+}
+
+.div__content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    color: var(--primary);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5rem 10rem;
+}
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 768px;
+    padding: 5rem;
+    border-radius: 2rem;
+    background-color: var(--secondaryBackground);
+}
+
+.form-input-login {
+    font-size: 2rem;
+    width: 30rem;
+}
+
+.form-container-button {
+    display: flex;
+    justify-content: center;
+}
+
+.form-button-login {
+    font-size: 2.5rem;
+    color: var(--secondaryBackground);
+}
+
+.form-login-error {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.card-producto {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 25rem;
+    margin: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    align-self: start;
+    transition: 0.3s;
+}
+
+.card-producto:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card__img {
+    height: 150px;
+    width: auto;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.card__title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+.card__description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    color: var(--primary);
+    padding: 0 1rem 0 1rem;
+}
+
+.card__price {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+.card__button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    align-self: flex-end;
+    color: var(--primary);
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.card__button:hover {
+    font-size: 2.5rem;
+}
+
+.card__button--cart {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    align-self: flex-end;
+    color: var(--primary);
+    background-color: rgb(177, 0, 88);
+    width: 100%;
+    padding: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.carrito__nav {
+    margin: 0 2rem 0 5rem;
+}
+
+.carrito__title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    color: var(--primary);
+}
+
+.carrito__subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 5rem;
+    color: var(--primary);
+    align-self: center;
+    margin: 10rem 0 10rem 0;
+}
+
+.carrito__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 768px;
+    padding: 5rem;
+    border-radius: 2rem;
+    background-color: var(--secondaryBackground);
+}
+
+.carrito__productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.carrito__buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.carrito__limpiar {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    color: var(--primary);
+    background-color: rgb(206, 0, 86);
+    width: 100%;
+    padding: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 5px;
+}
+
+.carrito__limpiar:hover {
+    font-size: 2.5rem;
+}
+
+.carrito__confirmar {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    color: var(--primary);
+    background-color: rgb(0, 180, 204);
+    width: 100%;
+    padding: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 5px;
+}
+
+.carrito__confirmar:hover {
+    font-size: 2.5rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem;
+}
+
+form label {
+    color: black;
+    font-size: 2.2rem;
+}
+
+.form-input-lg {
+    width: 40rem;
+}
+
+.barra {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .2);
+    height: 25px;
+}
+
+.barra_azul {
+    background-color: #247CC0;
+    border-radius: 10px;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 0%;
+}
+
+.barra_verde {
+    background-color: #2EA265 !important;
+}
+
+.barra_roja {
+    background-color: #DE3152 !important;
+}
+
+.producto {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--primaryBackground);
+    width: 50%;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    align-self: center;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#barra_estado span {
+    color: #fff;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.producto__img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.producto__title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+.producto__description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    color: var(--primary);
+    padding: 0 1rem 0 1rem;
+}
+
+.producto__price {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+.producto__button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    align-self: flex-end;
+    color: var(--primary);
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.producto__button:hover {
+    font-size: 2.5rem;
+}
+
+.compra__container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 768px;
+    padding: 5rem;
+    border-radius: 2rem;
+    background-color: var(--secondaryBackground);
+}
+
+.compra__title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    color: var(--primary);
+    align-self: center;
+
+}
+
+.compra__button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    color: var(--primary);
+    background-color: rgb(206, 0, 86);
+    width: 100%;
+    padding: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 5px;
+}
+
+.compra__detalle {
+    margin: 5rem;
+}
+
+.compra__monto {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.compra__precio {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--primary);
+}
