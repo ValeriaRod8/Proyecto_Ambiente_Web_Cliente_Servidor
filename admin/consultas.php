@@ -135,7 +135,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2" href="#">
                                     <svg class="bi">
                                         <use xlink:href="#file-earmark" />
                                     </svg>
@@ -174,60 +174,6 @@
                     <button class="btn btn-primary" id="botonMostrar" type="button" onclick="mostrarFormCrear()">Nueva Consulta</button>
                 </div>
                 <div class="table-responsive small" id="tablaConsultas">
-                    <?php
-/*                     require_once "../DAL/consulta.php";
-
-                    $query = "select id, nombre, telefono, correo, detalle from consultas";
-                    $consultas = getArrayConsulta($query);
-
-                    if (!empty($consultas)) {
-                        echo "<table class='table table-hover'";
-                        echo "<thead>";
-                        echo "<tr>";
-                        echo "<th scope='col'>Nombre</th>";
-                        echo "<th scope='col'>Telefono</th>";
-                        echo "<th scope='col'>Correo</th>";
-                        echo "<th scope='col'>Detalle</th>";
-                        echo "<th scope='col'>Acciones</th>";
-                        echo "</tr>";
-                        echo "</thead>";
-                        foreach ($consultas  as $consulta) {
-                            echo "<tr data-id=" . $consulta['id'] . ">";
-                            echo "<td>" . $consulta['nombre'] . "</td>";
-                            echo "<td>" . $consulta['telefono'] . "</td>";
-                            echo "<td>" . $consulta['correo'] . "</td>";
-                            echo "<td>" . $consulta['detalle'] . "</td>";
-                            echo
-                            "<td>
-                                <button class='btn btn-outline-warning' onclick='actualizarConsulta(\"actualizarConsulta\", " . $consulta['id'] . ")'>Actualizar</button>
-                                <button type='button' class='btn btn-outline-danger' data-bs-toggle='modal' data-bs-target='#modalEliminar" . $consulta['id'] . "'>Eliminar</button>
-                                <div class='modal fade' id='modalEliminar" . $consulta['id'] . "' tabindex='-1'>
-                                    <div class='modal-dialog modal-dialog-centered'>
-                                        <div class='modal-content'>
-                                            <div class='modal-header'>
-                                                <h5 class='modal-title'>Eliminar Consulta</h5>
-                                                <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
-                                            </div>
-                                            <div class='modal-body d-flex justify-content-center'>
-                                                <p style='font-size: 1.2rem';>¿Seguro de Eliminar la Consulta de <strong>" . $consulta['nombre'] . "</strong>?</p>
-                                            </div>
-                                            <div class='modal-footer'>
-                                                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
-                                                <button class='btn btn-danger' data-bs-dismiss='modal' onclick='eliminarConsulta(\"eliminarConsulta\", " . $consulta['id'] . ")'>Eliminar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>";
-                            echo "</tr>";
-                        }
-                        echo "</table>";
-                    } else {
-                        echo "<h2>No hay Consultas</h2>";
-                    } */
-
-
-                    ?>
                 </div>
                 <form class="row" id="formConsultas" method="post" action="../DAL/crearConsulta.php" style="display: none;">
                     <div class="row">
