@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if ($_SESSION['rol'] != 'Administrador') {
+    header("Location: ../index.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="auto">
 

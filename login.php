@@ -25,7 +25,7 @@
     <main class="container">
         <div class="container-login mt-5" id="container-login">
             <h1>Iniciar Sesión</h1>
-            <form id="login-form" class="d-flex flex-column align-items-center" method="post" action="DAL/login.php">
+            <form id="login-form" class="d-flex flex-column align-items-center">
                 <div class="mt-5 container-input">
                     <label class="form-label" for="email">Correo</label>
                     <input class="form-control form-input-login" type="email" id="email" name="email" required>
@@ -38,11 +38,13 @@
                     <p><a href="register.php" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Registrarse</a></p>
                 </div>
                 <div class="form-container-button">
-                    <button class="form-button-login btn btn-primary mt-5 px-5 fw-bold" type="submit" id="login" name="login">Entrar</button>
+                    <button class="form-button-login btn btn-primary mt-5 px-5 fw-bold" type="button" id="login" name="login" onclick="loginFormulario()">Entrar</button>
                 </div>
             </form>
         </div>
     </main>
+    <script src="assets/js/jquery-3.5.1.js"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 
 </html>
