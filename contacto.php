@@ -34,7 +34,7 @@
 
 
     <form action="#" method="post">
-        <h2 style="text-align: left; color: black; font-weight: bold;">Contactenos</h2>
+        <h2 style="text-align: left; color: black; font-weight: bold;">Contáctenos</h2>
 
         <label for="nombre" style="display: block; margin-bottom: 10px; width: 100%; font-weight: bold; font-size: 18px;">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required style="width: 100%; margin-bottom: 20px; padding: 5px; font-size: 16px;">

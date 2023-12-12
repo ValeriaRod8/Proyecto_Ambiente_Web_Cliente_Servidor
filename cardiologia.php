@@ -43,7 +43,7 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: center;">Cardiologia</h2>
+            <h2 style="text-align: center;">Cardiología</h2>
             <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
                 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -56,7 +56,7 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: left;">Equipo Medico</h2>
+            <h2 style="text-align: left;">Equipo Médico:</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
                     <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">

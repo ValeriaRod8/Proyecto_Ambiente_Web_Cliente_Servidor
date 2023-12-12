@@ -41,7 +41,7 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: center;">Ginecologia</h2>
+            <h2 style="text-align: center;">Ginecología</h2>
             <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
                 is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.

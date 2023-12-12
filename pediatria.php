@@ -52,11 +52,11 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: left;">Equipo Medico</h2>
+            <h2 style="text-align: left;">Equipo Médico:</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-                    <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
+                <img src="assets/img/doctores.jpg" alt="Imagen Doctores"height="250px" width="450px">
+                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctores Pedro, Ana, Juan, Lucia y Lucas.</p>
                 </div>
                 <p style="font-size: 16px; text-align: left;">Contamos con un equipo de pediatras altamente calificados y enfermeras dedicadas, todos ellos apasionados por la salud infantil. Estamos aquí para responder a tus preguntas, abordar tus preocupaciones y colaborar contigo para garantizar el desarrollo saludable de tu hijo.
                 </p>
@@ -70,8 +70,8 @@
             <h2 style="text-align: left;">Nuestro Compromiso:</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-                    <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
+                <img src="assets/img/padres.jpg" alt="Imagen Pediatría"height="410px" width="400px">
+                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black"> Doctor Martínez.</p>
                 </div>
                 <p style="font-size: 16px; text-align: left;">Nos enorgullece comprometernos con la salud y el bienestar de tus hijos desde el momento en que nacen hasta la adolescencia. Nuestra misión es proporcionar atención pediátrica integral, centrada en el niño y orientada hacia la prevención, el diagnóstico y el tratamiento de enfermedades infantiles.
                 </p>
@@ -85,8 +85,9 @@
             <h2 style="text-align: left;">Educación para Padres:</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-                    <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
+                    <img src="assets/img/pediatra.png" alt="Imagen Pediatría"height="250px" width="400px">
+                
+                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctor Fernández.</p>
                 </div>
                 <p style="font-size: 16px; text-align: left;">Nos dedicamos a proporcionar a los padres las herramientas y la información necesarias para cuidar a sus hijos en casa. Ofrecemos orientación sobre la crianza, desarrollo infantil y manejo de enfermedades comunes para fortalecer la salud de tu familia.
                 </p>

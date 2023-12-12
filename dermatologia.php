@@ -39,7 +39,7 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: center;">Dermatologia</h2>
+            <h2 style="text-align: center;">Dermatología</h2>
             <p>Ofrecemos una amplia gama de servicios dermatológicos, incluyendo el tratamiento de enfermedades de la piel, procedimientos cosméticos, cirugía dermatológica y terapias avanzadas. Ya sea que necesites tratamiento para el acné, la detección de cáncer de piel o procedimientos estéticos, estamos aquí para ayudarte.
             </p>
         </div>
