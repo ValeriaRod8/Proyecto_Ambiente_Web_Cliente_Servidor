@@ -20,11 +20,19 @@
             </a>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.php">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                     <li><a href="nosotros.php">Nosotros</a></li>
                     <li><a href="pediatria.php" style="font-weight: bold;">Servicios</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
-                    <li><a href="login.php">Iniciar Sesión</a></li>
+                    <li><a href="Citas.php">Citas</a></li>
+                    <li><a href="productos.html">Tienda</a></li>
+                    <?php
+                    if (isset($_SESSION['login'])) {
+                        echo '<li><a href="?logout">Cerrar Sesión</a></li>';
+                    } else {
+                        echo '<li><a href="login.php">Iniciar Sesión</a></li>';
+                    }
+                    ?>
                 </ul>
             </nav>
         </div>
@@ -52,6 +60,7 @@
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
                 <img src="assets/img/doctora.jpg" alt="Imagen Doctora"height="250px" width="400px">
+                <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctora Victora</p>
                 </div>
                 <p style="font-size: 16px; text-align: left;"> Ofrecmos una atención adecuada para en el cuidado de la piel, desde el acné hasta el cáncer de piel y todo lo demás. Nuestros dermatólogos están capacitados para evaluar y tratar una amplia gama de afecciones de la piel, incluidas las más comunes, como el acné, el eczema y la psoriasis, así como las más raras. Nuestros dermatólogos también están capacitados para evaluar y tratar el cáncer de piel, incluido el melanoma, el tipo más grave de cáncer de piel.
                 </p>
@@ -66,7 +75,7 @@
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
                 <img src="assets/img/vista.jpg" alt="Imagen Doctora"height="350px" width="400px">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
+                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctor Roberto</p>
                 </div>
                 <p style="font-size: 16px; text-align: left;">Abogamos por la prevención y la educación sobre el cuidado de la piel. Además de tratar afecciones existentes, trabajamos contigo para establecer rutinas de cuidado de la piel y proporcionar información sobre la protección solar y prácticas saludables para mantener la salud de tu piel a largo plazo.
                 </p>
@@ -81,6 +90,7 @@
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
                 <img src="assets/img/prevencion.jpg" alt="Imagen Prevencion"height="250px" width="400px">
+                <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctor Luis</p>
                 </div>
                 <p style="font-size: 16px; text-align: left;">Creamos un entorno acogedor y profesional para que te sientas cómodo durante tus visitas. Nuestro objetivo es hacer que cada consulta sea una experiencia positiva, donde puedas discutir tus preocupaciones y recibir el mejor cuidado dermatológico disponible.
 

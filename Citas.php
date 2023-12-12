@@ -88,19 +88,21 @@
             <a href="index.php" class="logo">
                 <img style="margin-top: 10px;" src="assets/img/logo.png" height="60px" width="100px" alt="Logo">
             </a>
-
-            <input type="checkbox" id="menu" />
-            <label for="menu">
-                <img src="assets/img/menu.png" class="menu-img" alt="menu">
-            </label>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.php" style="font-weight: bold;">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                     <li><a href="nosotros.php">Nosotros</a></li>
                     <li><a href="pediatria.php">Servicios</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
-                    <li><a href="Citas.php">Citas</a></li>
-                    <li><a href="admin/admin.php">Admin (Opcion Temporal)</a></li>
+                    <li><a href="Citas.php" style="font-weight: bold;">Citas</a></li>
+                    <li><a href="productos.html">Tienda</a></li>
+                    <?php
+                    if (isset($_SESSION['login'])) {
+                        echo '<li><a href="?logout">Cerrar Sesión</a></li>';
+                    } else {
+                        echo '<li><a href="login.php">Iniciar Sesión</a></li>';
+                    }
+                    ?>
                 </ul>
             </nav>
         </div>

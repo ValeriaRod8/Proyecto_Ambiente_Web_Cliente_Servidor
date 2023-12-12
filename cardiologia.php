@@ -24,11 +24,19 @@
             <input type="checkbox" id="menu" />
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.php">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                     <li><a href="nosotros.php">Nosotros</a></li>
-                    <li><a href="pediatria.php" style="font-weight: bold;">Servicios</a></li>
+                    <li><a href="pediatria.php"style="font-weight: bold;">Servicios</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
-                    <li><a href="login.php">Iniciar Sesión</a></li>
+                    <li><a href="Citas.php">Citas</a></li>
+                    <li><a href="productos.html">Tienda</a></li>
+                    <?php
+                    if (isset($_SESSION['login'])) {
+                        echo '<li><a href="?logout">Cerrar Sesión</a></li>';
+                    } else {
+                        echo '<li><a href="login.php">Iniciar Sesión</a></li>';
+                    }
+                    ?>
                 </ul>
             </nav>
         </div>
@@ -44,29 +52,21 @@
     <div class="servicios-content container">
         <div class="servicios-txt">
             <h2 style="text-align: center;">Cardiología</h2>
-            <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+            <p>La cardiología, como disciplina médica, ha experimentado notables avances que transforman la manera en que abordamos las enfermedades cardiovasculares. En la vanguardia de esta revolución, nuestro equipo de cardiólogos está comprometido con ofrecer la mejor atención posible para garantizar la salud cardiovascular de nuestros pacientes.
             </p>
         </div>
     </div>
-   
+
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: left;">Equipo Médico</h2>
+            <h2 style="text-align: left;">Medicina Personalizada</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-                    <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
+                    <img src="https://www.topdoctors.es/files/Image/large/c47fdb861cffb68169e1b88cfd008a98.jpg" alt="Imagen" height="250px" width="400px">
+                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctora Marta</p>
                 </div>
-                <p style="font-size: 16px; text-align: left;">psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+                <p style="font-size: 16px; text-align: left;">La medicina personalizada ha llegado a la cardiología, permitiendo adaptar los tratamientos a las características genéticas y biomoleculares únicas de cada paciente. Esto no solo mejora la eficacia de los tratamientos, sino que también reduce los riesgos y efectos secundarios asociados.
                 </p>
             </div>
         </div>
@@ -75,16 +75,13 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
+            <h2 style="text-align: left;">Prevención y Estilo de Vida</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-                    <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
+                    <img src="https://clinicasascires.com/media/62e3d248b6ab4_Ascires%20Cardiologia.png" alt="Imagen" height="200px" width="450px">
+                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Estilo de Vida</p>
                 </div>
-                <p style="font-size: 16px; text-align: left;">psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+                <p style="font-size: 16px; text-align: left;">La prevención sigue siendo un pilar fundamental en el cuidado cardiovascular. Las estrategias de modificación del estilo de vida, como la adopción de una dieta balanceada, la actividad física regular y la gestión del estrés, son esenciales para reducir los factores de riesgo. Los dispositivos wearables y las aplicaciones de salud digital también han demostrado ser herramientas valiosas para el monitoreo continuo y la intervención preventiva.
                 </p>
             </div>
         </div>
@@ -93,16 +90,13 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
+            <h2 style="text-align: left;">Tratamientos Innovadores</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-                    <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
+                    <img src="https://st2.depositphotos.com/3153157/6161/i/450/depositphotos_61615207-stock-photo-doctorconsult-patient-with-heart-problems.jpg" alt="Imagen" height="250px" width="400px">
+                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctor Francisco</p>
                 </div>
-                <p style="font-size: 16px; text-align: left;">psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+                <p style="font-size: 16px; text-align: left;">Los tratamientos para enfermedades cardiovasculares han evolucionado notablemente. La cirugía cardíaca mínimamente invasiva y los procedimientos de cateterismo ofrecen opciones más seguras y efectivas para abordar afecciones como las obstrucciones arteriales y las válvulas cardíacas defectuosas. Además, las terapias farmacológicas han mejorado, proporcionando opciones más específicas y con menos efectos secundarios.
                 </p>
             </div>
         </div>
@@ -114,12 +108,12 @@
     <button style="display: block; margin: 0 auto; padding: 15px 30px; font-size: 18px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" onclick="location.href='DAL/reserva.php'">Reservar</button>
 
     <footer class="footer" style="background-color: #fafafa; height: 260px">
-    
+
 
     </footer>
 
     <?php
-  
+
     ?>
 
 

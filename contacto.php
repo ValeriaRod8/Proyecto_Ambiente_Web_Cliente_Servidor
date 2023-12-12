@@ -22,11 +22,19 @@
             </a>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.php">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                     <li><a href="nosotros.php">Nosotros</a></li>
                     <li><a href="pediatria.php">Servicios</a></li>
                     <li><a href="contacto.php" style="font-weight: bold;">Contacto</a></li>
-                    <li><a href="login.php">Iniciar Sesión</a></li>
+                    <li><a href="Citas.php">Citas</a></li>
+                    <li><a href="productos.html">Tienda</a></li>
+                    <?php
+                    if (isset($_SESSION['login'])) {
+                        echo '<li><a href="?logout">Cerrar Sesión</a></li>';
+                    } else {
+                        echo '<li><a href="login.php">Iniciar Sesión</a></li>';
+                    }
+                    ?>
                 </ul>
             </nav>
         </div>
