@@ -3,10 +3,10 @@ $(document).ready(function () {
         url: '../DAL/citas/cita.php',
         method: 'GET',
         dataType: 'json',
-        success: function (citas) {
+        success: (citas) => {
             mostrarCitas(citas);
         },
-        error: function (error) {
+        error: (error) => {
             console.error('Error al obtener las citas:', error);
         }
     });
@@ -14,7 +14,7 @@ $(document).ready(function () {
 
 function mostrarCitas(citas) {
     if (citas.length > 0) {
-        let tablaConsultas = `
+        let tablaCitas = `
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -28,24 +28,23 @@ function mostrarCitas(citas) {
                     <th scope="col">Acciones</th>
                 </tr>
             </thead>`;
-
-        citas.forEach(function (citas) {
-            console.log(citas);
-            tablaConsultas += `
-                <tr data-id="${citas.id}">
-                    <td>${citas.Especialista}</td>
-                    <td>${citas.CorreoEspecialista}</td>
-                    <td>${citas.CorreoCliente}</td>
-                    <td>${citas.Especialidad}</td>
-                    <td>${citas.Descripcion}</td>
-                    <td>${citas.Fecha}</td>
-                    <td>${citas.Notas}</td>
-                
+        
+        citas.forEach((cita) => {
+            console.log(cita);
+            tablaCitas += `
+                <tr data-id="${cita.Id}">
+                    <td>${cita.Especialista}</td>
+                    <td>${cita.CorreoEspecialista}</td>
+                    <td>${cita.CorreoCliente}</td>
+                    <td>${cita.Especialidad}</td>
+                    <td>${cita.Descripcion}</td>
+                    <td>${cita.Fecha}</td>
+                    <td>${cita.Notas}</td>
                     <td>
-                        <button class="btn btn-outline-warning" onclick="mostrarFormActualizar('${citas.id}', '${citas.Especialista}', '${citas.CorreoEspecialista}'
-                        , '${citas.CorreoCliente}', '${citas.Especialidad}, '${citas.Descripcion}', '${citas.Fecha}', '${citas.Notas}')">Actualizar</button>
-                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar${citas.id}">Eliminar</button>
-                        <div class="modal fade" id="modalEliminar${citas.id}" tabindex="-1">
+                        <button class="btn btn-outline-warning" onclick="mostrarFormActualizar('${cita.Id}', '${cita.Especialista}', '${cita.CorreoEspecialista}'
+                        , '${cita.CorreoCliente}', '${cita.Especialidad}', '${cita.Descripcion}', '${cita.Fecha}', '${cita.Notas}')">Actualizar</button>
+                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar${cita.Id}">Eliminar</button>
+                        <div class="modal fade" id="modalEliminar${cita.Id}" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -53,11 +52,11 @@ function mostrarCitas(citas) {
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body d-flex justify-content-center">
-                                        <p style="font-size: 1.2rem";>¿Seguro de Eliminar la Consulta de <strong>${citas.Especialidad}</strong>?</p>
+                                        <p style="font-size: 1.2rem";>¿Seguro de Eliminar la Consulta de <strong>${cita.Especialidad}</strong>?</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                        <button class="btn btn-danger" data-bs-dismiss="modal" onclick="eliminarConsulta(${citas.id})">Eliminar</button>
+                                        <button class="btn btn-danger" data-bs-dismiss="modal" onclick="eliminarCita(${cita.Id})">Eliminar</button>
                                     </div>
                                 </div>
                             </div>
@@ -67,18 +66,18 @@ function mostrarCitas(citas) {
             `;
         });
 
-        tablaConsultas += `</table>`;
-        $("#tablaConsultas").append(tablaConsultas);
+        tablaCitas += `</table>`;
+        $("#tablaCitas").append(tablaCitas);
     }
 }
 
 function mostrarFormCrear() {
     //Titulo de Consultas
-    let title = document.getElementById("tituloConsultas");
+    let title = document.getElementById("titulo");
     //Form de Creacion de Consulta (Create)
-    let form = document.getElementById("formConsultas");
+    let form = document.getElementById("formCitas");
     //Tabla de Consultas (Read)
-    let table = document.getElementById("tablaConsultas");
+    let table = document.getElementById("tablaCitas");
     //Boton dinamico (Create/Read)
     let botonMostrar = document.getElementById("botonMostrar");
     let botonFormulario = document.getElementById("botonFormulario");
@@ -93,7 +92,7 @@ function mostrarFormCrear() {
         botonMostrar.textContent = "Ver Citas";
         botonMostrar.classList.remove("btn-primary");
         botonMostrar.classList.add("btn-success");
-        botonFormulario.textContent = "Crear Consulta";
+        botonFormulario.textContent = "Crear Cita";
         botonFormulario.className = "btn btn-primary mt-5";
     } else {
         // Mostrar la tabla
@@ -108,11 +107,11 @@ function mostrarFormCrear() {
 
 function mostrarFormActualizar(id, especialista, correoEspecialista, correoCliente, especialidad, descripcion, fecha, notas) {
     //Titulo de Consultas
-    let title = document.getElementById("tituloConsultas");
+    let title = document.getElementById("titulo");
     //Form de Creacion de Consulta (Create)
-    let form = document.getElementById("formConsultas");
+    let form = document.getElementById("formCitas");
     //Tabla de Consultas (Read)
-    let table = document.getElementById("tablaConsultas");
+    let table = document.getElementById("tablaCitas");
     //Botones dinamicos (Create/Read/Update)
     let botonMostrar = document.getElementById("botonMostrar");
     let botonFormulario = document.getElementById("botonFormulario");
@@ -147,7 +146,7 @@ function mostrarFormActualizar(id, especialista, correoEspecialista, correoClien
     }
 }
 
-function eliminarConsulta(id) {
+function eliminarCita(id) {
     $.ajax({
         type: 'POST',
         url: '../DAL/citas/eliminarCita.php',

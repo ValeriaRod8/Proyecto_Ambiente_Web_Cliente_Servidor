@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if (!empty($id) && !empty($especialista) && !empty($correoEspecialista) && !empty($correoCliente) && !empty($especialidad) && !empty($descripcion) && !empty($fecha)) {
                 require_once "cita.php";
-                if (actualizarConsulta($id, $especialista, $correoEspecialista, $correoCliente, $especialidad, $descripcion, $fecha, $notas))) {
+                if (actualizarCita($id, $especialista, $correoEspecialista, $correoCliente, $especialidad, $descripcion, $fecha, $notas)) {
                     header('Location: ../../admin/citas.php');
                 }
             }

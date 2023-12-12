@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     echo getJSON();
 }
 
-function crearConsulta($pEspecialista, $pCorreoEspecialista, $pCorreoCliente, $pEspecialidad, $pDescripcion, $pFecha, $pNotas)
+function crearCita($pEspecialista, $pCorreoEspecialista, $pCorreoCliente, $pEspecialidad, $pDescripcion, $pFecha, $pNotas)
 {
     $retorno = false;
 
@@ -14,16 +14,8 @@ function crearConsulta($pEspecialista, $pCorreoEspecialista, $pCorreoCliente, $p
         $oConexion = Conecta();
 
         if (mysqli_set_charset($oConexion, "utf8")) {
-            $stmt = $oConexion->prepare("insert into cita (Especialista, CorreoEspecialista, CorreoCliente, Especialidad, Descripcion, Fecha, Notas) values (?, ?, ?, ?)");
-            $stmt->bind_param("ssss", $iEspecialista, $iCorreoEspecialista, $iCorreoCliente, $iEspecialidad, $iDescripcion, $iFecha, $iNotas);
-
-            $iEspecialista = $pEspecialista;
-            $iCorreoEspecialista = $pCorreoEspecialista;
-            $iCorreoCliente = $pCorreoCliente;
-            $iEspecialidad = $pEspecialidad;
-            $iDescripcion = $pDescripcion;
-            $iFecha = $pFecha;
-            $iNotas = $pNotas;
+            $stmt = $oConexion->prepare("insert into cita (Especialista, CorreoEspecialista, CorreoCliente, Especialidad, Descripcion, Fecha, Notas) values (?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("sssssss", $pEspecialista, $pCorreoEspecialista, $pCorreoCliente, $pEspecialidad, $pDescripcion, $pFecha, $pNotas);
 
             if ($stmt->execute()) {
                 $retorno = true;
@@ -39,25 +31,15 @@ function crearConsulta($pEspecialista, $pCorreoEspecialista, $pCorreoCliente, $p
 }
 
 //$pEspecialista, $pCorreoEspecialista, $pCorreoCliente, $pEspecialidad, $pDescripcion, $pFecha, $pNotas
-function actualizarConsulta($pId, $pEspecialista, $pCorreoEspecialista, $pCorreoCliente, $pEspecialidad, $pDescripcion, $pFecha, $pNotas)
+function actualizarCita($pId, $pEspecialista, $pCorreoEspecialista, $pCorreoCliente, $pEspecialidad, $pDescripcion, $pFecha, $pNotas)
 {
     $retorno = false;
 
     try {
         $oConexion = Conecta();
-//UPDATE cita SET Especialista = ?, CorreoEspecialista = ?, CorreoCliente = ?, Especialidad = ?,Descripcion = ?,Fecha = ?, Notas = ? WHERE Id = ?;
         if (mysqli_set_charset($oConexion, "utf8")) {
             $stmt = $oConexion->prepare("UPDATE cita SET Especialista = ?, CorreoEspecialista = ?, CorreoCliente = ?, Especialidad = ?, Descripcion = ?, Fecha = ?, Notas = ? WHERE Id = ?");
-            $stmt->bind_param("ssssi", $iEspecialista, $iCorreoEspecialista, $iCorreoCliente, $iEspecialidad, $iDescripcion, $iFecha, $iNotas, $iId);
-
-            $iEspecialista = $pEspecialista;
-            $iCorreoEspecialista = $pCorreoEspecialista;
-            $iCorreoCliente = $pCorreoCliente;
-            $iEspecialidad = $pEspecialidad;
-            $iDescripcion = $pDescripcion;
-            $iFecha = $pFecha;
-            $iNotas = $pNotas;
-            $iId = $pId;
+            $stmt->bind_param("sssssssi", $pEspecialista, $pCorreoEspecialista, $pCorreoCliente, $pEspecialidad, $pDescripcion, $pFecha, $pNotas, $pId);
 
             if ($stmt->execute()) {
                 $retorno = true;
