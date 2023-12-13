@@ -38,9 +38,8 @@ if (isset($_GET['logout'])) {
                     <li><a href="nosotros.php">Nosotros</a></li>
                     <li><a href="pediatria.php">Servicios</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
-                    <li><a href="Citas.php">Citas</a></li>
+                    <li><a href="citas.php">Citas</a></li>
                     <li><a href="productos.php">Tienda</a></li>
-                    <li><a href="citasCliente.php">Citas Cliente</a></li>
                 </ul>
                 <ul>
                     <li>

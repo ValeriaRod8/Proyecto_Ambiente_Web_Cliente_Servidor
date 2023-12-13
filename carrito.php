@@ -41,7 +41,7 @@ if (isset($_GET['logout'])) {
                     <li><a href="nosotros.php">Nosotros</a></li>
                     <li><a href="pediatria.php">Servicios</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
-                    <li><a href="Citas.php">Citas</a></li>
+                    <li><a href="citas.php">Citas</a></li>
                     <li><a href="productos.php">Tienda</a></li>
                 </ul>
                 <ul>
@@ -64,7 +64,7 @@ if (isset($_GET['logout'])) {
         </div>
     </header>
     <main class="container">
-        <div class="carrito__container">
+        <div class="carrito__container mb-5">
             <h1 class="carrito__title">Carrito</h1>
             <div class="carrito__productos"></div>
         </div>

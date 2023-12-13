@@ -19,6 +19,60 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 function autenticarUsuario($pCorreo, $pPassword)
 {
     try {
+        require_once "conexion.php";
+        $query = "SELECT id, nombre, correo, password, rol FROM usuarios WHERE correo = ?";
+        $oConexion = Conecta();
+
+        if ($stmt = mysqli_prepare($oConexion, $query)) {
+            mysqli_stmt_bind_param($stmt, "s", $pCorreo);
+            if (mysqli_stmt_execute($stmt)) {
+                $result = mysqli_stmt_get_result($stmt);
+                if ($initSession = mysqli_fetch_assoc($result)) {
+                    $auth = password_verify($pPassword, $initSession['password']);
+
+                    if ($auth) {
+                        session_start();
+                        $_SESSION['rol'] = $initSession['rol'];
+                        $_SESSION['nombre'] = $initSession['nombre'];
+                        $_SESSION['correo'] = $initSession['correo'];
+                        $_SESSION['id'] = $initSession['id'];
+                        $_SESSION['login'] = true;
+
+                        switch ($_SESSION['rol']) {
+                            case 'Administrador':
+                                echo "Administrador";
+                                break;
+                            case 'Cliente':
+                                echo "Cliente";
+                                break;
+                            default:
+                                $_SESSION['rol'] = 'Cliente';
+                                echo "Cliente";
+                                break;
+                        }
+                    } else {
+                        echo "Correo o Contraseña Incorrectos";
+                    }
+                } else {
+                    echo "Correo o Contraseña Incorrectos";
+                }
+            } else {
+                echo "Error al ejecutar la consulta";
+            }
+            mysqli_stmt_close($stmt);
+        } else {
+            echo "Error en la preparación de la consulta";
+        }
+    } catch (\Throwable $th) {
+        echo $th;
+    } finally {
+        Desconecta($oConexion);
+    }
+}
+
+/*function autenticarUsuario($pCorreo, $pPassword)
+{
+    try {
         $query = "select id, nombre, correo, password, rol from usuarios where correo = '$pCorreo'";
         $initSession = getObjeto($query);
 
@@ -61,7 +115,7 @@ function autenticarUsuario($pCorreo, $pPassword)
     } catch (\Throwable $th) {
         echo $th;
     }
-}
+}*/
 
 function getObjeto($sql)
 {

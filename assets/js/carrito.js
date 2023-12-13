@@ -80,9 +80,11 @@ function eventoConfirmar() {
                     });
 
                     let elementoMonto = $(`<h2 class="carrito__subtitle">Monto Total: $${montoTotal.toFixed(2)}</h2>`);
+                    let botonVolver = `<a class="btn btn-success fs-1 px-5 py-3" href="productos.php">Volver</a>`
 
                     $('.carrito__title').text('Compra Exitosa!');
                     $(".carrito__container").append(elementoMonto);
+                    $(".carrito__container").append(botonVolver);
                     break;
 
                 default:
