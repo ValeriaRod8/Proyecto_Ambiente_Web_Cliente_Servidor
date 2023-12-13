@@ -25,7 +25,7 @@
                 </ul>
                 <ul>
                     <li><a href="index.php">Inicio</a></li>
-                    <li><a class="navbar__link--activodi" href="nosotros.php">Nosotros</a></li>
+                    <li><a class="navbar__link--activo" href="nosotros.php">Nosotros</a></li>
                     <li><a href="pediatria.php">Servicios</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
                     <li><a href="Citas.php">Citas</a></li>
