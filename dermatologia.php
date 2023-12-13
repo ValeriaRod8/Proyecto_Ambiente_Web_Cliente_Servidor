@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina</title>
+    <title>Consultorio Pie Salud</title>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
@@ -70,14 +70,14 @@
             <h2 style="text-align: left;">Equipo Médico</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-<<<<<<< HEAD
-                    <img src="assets/img/doctora.jpg" alt="Imagen Doctora" height="250px" width="400px">
-=======
+
+               
+
                 <img src="assets/img/doctora.jpg" alt="Imagen Doctora"height="250px" width="400px">
                 <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctora Victora</p>
->>>>>>> 31062503e7120b1494921b593887e5800683b862
+
                 </div>
-                <p style="font-size: 16px; text-align: left;"> Ofrecmos una atención adecuada para en el cuidado de la piel, desde el acné hasta el cáncer de piel y todo lo demás. Nuestros dermatólogos están capacitados para evaluar y tratar una amplia gama de afecciones de la piel, incluidas las más comunes, como el acné, el eczema y la psoriasis, así como las más raras. Nuestros dermatólogos también están capacitados para evaluar y tratar el cáncer de piel, incluido el melanoma, el tipo más grave de cáncer de piel.
+                <p style="font-size: 16px; text-align: left;"> Ofrecemos una atención adecuada para en el cuidado de la piel, desde el acné hasta el cáncer de piel y todo lo demás. Nuestros dermatólogos están capacitados para evaluar y tratar una amplia gama de afecciones de la piel, incluidas las más comunes, como el acné, el eczema y la psoriasis, así como las más raras. Nuestros dermatólogos también están capacitados para evaluar y tratar el cáncer de piel, incluido el melanoma, el tipo más grave de cáncer de piel.
                 </p>
             </div>
         </div>
@@ -89,13 +89,12 @@
             <h2 style="text-align: left;">Enfoque en la Prevención</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-<<<<<<< HEAD
-                    <img src="assets/img/vista.jpg" alt="Imagen Doctora" height="350px" width="400px">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
-=======
+
+         
+
                 <img src="assets/img/vista.jpg" alt="Imagen Doctora"height="350px" width="400px">
                     <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctor Roberto</p>
->>>>>>> 31062503e7120b1494921b593887e5800683b862
+
                 </div>
                 <p style="font-size: 16px; text-align: left;">Abogamos por la prevención y la educación sobre el cuidado de la piel. Además de tratar afecciones existentes, trabajamos contigo para establecer rutinas de cuidado de la piel y proporcionar información sobre la protección solar y prácticas saludables para mantener la salud de tu piel a largo plazo.
                 </p>
@@ -109,12 +108,12 @@
             <h2 style="text-align: left;">Ambiente de Cuidado</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-<<<<<<< HEAD
-                    <img src="assets/img/prevencion.jpg" alt="Imagen Prevencion" height="250px" width="400px">
-=======
+
+                  
+
                 <img src="assets/img/prevencion.jpg" alt="Imagen Prevencion"height="250px" width="400px">
                 <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctor Luis</p>
->>>>>>> 31062503e7120b1494921b593887e5800683b862
+
                 </div>
                 <p style="font-size: 16px; text-align: left;">Creamos un entorno acogedor y profesional para que te sientas cómodo durante tus visitas. Nuestro objetivo es hacer que cada consulta sea una experiencia positiva, donde puedas discutir tus preocupaciones y recibir el mejor cuidado dermatológico disponible.
 
