@@ -20,46 +20,58 @@ if (isset($_GET['logout'])) {
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/servicio.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="menu container">
-            <a href="index.php" class="logo">
-                <img style="margin-top: 10px;" src="assets/img/logo.png" height="60px" width="100px" alt="Logo">
-            </a>
-            <nav class="navbar">
+    <header>
+        <div class="navbar">
+            <nav class="navbar__links">
                 <ul>
-                    <li><a href="index.php" style="font-weight: bold;">Inicio</a></li>
+                    <a class="navbar__logo" href="index.php">
+                        <img src="assets/img/logo.png" alt="Logo">
+                    </a>
+                </ul>
+                <ul>
+                    <li><a class="navbar__link--activo" href="index.php">Inicio</a></li>
                     <li><a href="nosotros.php">Nosotros</a></li>
                     <li><a href="pediatria.php">Servicios</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
                     <li><a href="Citas.php">Citas</a></li>
-                    <li><a href="productos.html">Tienda</a></li>
+                    <li><a href="productos.php">Tienda</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="carrito.php">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="black" class="bi bi-cart4" viewBox="0 0 16 16">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                            </svg>
+                        </a>
+                    </li>
                     <?php
                     if (isset($_SESSION['login'])) {
-                        echo '<li><a href="?logout">Cerrar Sesión</a></li>';
+                        echo '<li class="navbar__login"><a href="?logout">Cerrar Sesión</a></li>';
                     } else {
-                        echo '<li><a href="login.php">Iniciar Sesión</a></li>';
+                        echo '<li class="navbar__login"><a href="login.php">Iniciar Sesión</a></li>';
                     }
                     ?>
                 </ul>
             </nav>
         </div>
-        <div class="header-content container">
-            <div class="header-txt">
-                <h1>Consultorio Pie Salud</h1>
-                <p>En el Consultorio nos complace darte la más cordial bienvenida. Estamos comprometidos a proporcionarte la mejor atención médica para cuidar de tu salud y bienestar.
-                    Nuestros servicios profesionales médicos están aquí para ofrecerte servicios de calidad y personalizados.
-                </p>
-                <a href="nosotros.php" class="btn-1">Información</a>
-            </div>
-            <div class="header-img">
-                <img src="assets/img/left.png" alt="">
-            </div>
-        </div>
     </header>
+    <div class="header-content container">
+        <div class="header-txt">
+            <h1>Consultorio Pie Salud</h1>
+            <p>En el Consultorio nos complace darte la más cordial bienvenida. Estamos comprometidos a proporcionarte la mejor atención médica para cuidar de tu salud y bienestar.
+                Nuestros servicios profesionales médicos están aquí para ofrecerte servicios de calidad y personalizados.
+            </p>
+            <a href="nosotros.php" class="btn-1">Información</a>
+        </div>
+        <div class="header-img">
+            <img src="assets/img/left.png" alt="">
+        </div>
+    </div>
     <section class="about container">
         <div class="about-img">
             <img src="assets/img/about.png" alt="">
