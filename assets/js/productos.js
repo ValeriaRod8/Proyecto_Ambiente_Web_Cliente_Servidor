@@ -73,6 +73,7 @@ function mostrarFormCrear() {
     let title = document.getElementById("tituloProductos");
     //Form de Creacion de Producto (Create)
     let form = document.getElementById("formProductos");
+    let rutaImagen = document.getElementById("ruta");
     //Tabla de Productos (Read)
     let table = document.getElementById("tablaProductos");
     //Boton dinamico (Create/Read)
@@ -82,6 +83,7 @@ function mostrarFormCrear() {
     if (table.style.display === "block" || table.style.display === "") {
         // Mostrar el formulario
         form.reset();
+        rutaImagen.style.display = "none";
         form.style.display = "block";
         form.action = "../DAL/productos/crearProducto.php";
         form.enctype = "multipart/form-data";
@@ -97,7 +99,7 @@ function mostrarFormCrear() {
         form.style.display = "none";
         title.textContent = "Productos";
         table.style.display = "block";
-        botonMostrar.textContent = "Nueva Producto";
+        botonMostrar.textContent = "Nuevo Producto";
         botonMostrar.classList.remove("btn-success");
         botonMostrar.classList.add("btn-primary");
     }
@@ -106,6 +108,7 @@ function mostrarFormCrear() {
 function mostrarFormActualizar(codigo, nombre, detalle, imagen, precio) {
     let title = document.getElementById("tituloProductos");
     let form = document.getElementById("formProductos");
+    let rutaImagen = document.getElementById("ruta");
     let table = document.getElementById("tablaProductos");
     let botonMostrar = document.getElementById("botonMostrar");
     let botonFormulario = document.getElementById("botonFormulario");
@@ -114,12 +117,13 @@ function mostrarFormActualizar(codigo, nombre, detalle, imagen, precio) {
         document.getElementById("inputCodigo").value = codigo;
         document.getElementById("inputNombre").value = nombre;
         document.getElementById("inputDetalle").value = detalle;
-        document.getElementById("inputImagen").src = '../../server/archivos/' + imagen;
+        document.getElementById("inputRutaImagen").value = imagen;
         document.getElementById("inputPrecio").value = parseFloat(precio);
         
         console.log('Mostrar formulario de actualización:', codigo, nombre, detalle, imagen, precio);
 
         table.style.display = "none";
+        rutaImagen.style.display = "block";
         form.style.display = "block";
         form.action = "../DAL/productos/actualizarProducto.php";
         title.textContent = "Actualizar Producto";
@@ -132,7 +136,7 @@ function mostrarFormActualizar(codigo, nombre, detalle, imagen, precio) {
         title.textContent = "Productos";
         form.style.display = "none";
         table.style.display = "block";
-        botonMostrar.textContent = "Nueva Producto";
+        botonMostrar.textContent = "Nuevo Producto";
         botonMostrar.classList.remove("btn-success");
         botonMostrar.classList.add("btn-primary");
     }

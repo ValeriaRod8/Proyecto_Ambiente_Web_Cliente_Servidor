@@ -217,25 +217,27 @@ if (isset($_GET['logout'])) {
                 </div>
 
                 <div class="form-container">
-                    <form class="row" id="formProductos" method="post" action="../DAL/crearProducto.php" style="display: none;">
-                        <div class="row">
-                            <input type="hidden" id="inputCodigo" name="inputCodigo">
-                            <div class="form-input-sm mt-3">
-                                <label for="inputNombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="inputNombre" name="inputNombre" required>
-                            </div>
-                            <div class="form-input-sm mt-3">
-                                <label for="inputDetalle" class="form-label">Detalle</label>
-                                <input type="text" class="form-control fs-3" id="inputDetalle" name="inputDetalle" required>
-                            </div>
+                    <form class="row" id="formProductos" method="post" enctype="multipart/form-data" action="../DAL/crearProducto.php" style="display: none;">
+                        <input type="hidden" id="inputCodigo" name="inputCodigo">
+                        <div class="form-input-sm mt-3">
+                            <label for="inputNombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="inputNombre" name="inputNombre" required>
                         </div>
-                        <div class="form-input-lg mt-3">
+                        <div class="form-input-sm mt-3">
+                            <label for="inputDetalle" class="form-label">Detalle</label>
+                            <input type="text" class="form-control" id="inputDetalle" name="inputDetalle" required>
+                        </div>
+                        <div class="form-input-sm mt-3">
                             <label for="inputPrecio" class="form-label">Precio</label>
-                            <input type="number" class="form-control fs-3" id="inputPrecio" name="inputPrecio" required>
+                            <input type="number" class="form-control" id="inputPrecio" name="inputPrecio" required>
+                        </div>
+                        <div class="form-input-sm mt-3" id="ruta" style="display: none;">
+                            <label for="inputRutaImagen" class="form-label">Ruta de Imagen Anterior</label>
+                            <input type="text" class="form-control" id="inputRutaImagen" name="inputRutaImagen" disabled readonly>
                         </div>
                         <div class="form-input-lg mt-3">
                             <label for="inputImagen" class="form-label">Imagen</label>
-                            <input type="file" class="form-control form-control-lg fs-3" name="inputImagen" id="inputImagen" accept="image/*" required>
+                            <input type="file" class="form-control form-control-lg" name="inputImagen" id="inputImagen" accept="image/*" required>
                             <div class="barra" style="display: none;">
                                 <div class="barra_azul" id="barra_estado">
                                     <span class="fs-3"></span>
@@ -243,7 +245,6 @@ if (isset($_GET['logout'])) {
                             </div>
                         </div>
                         <div class="col-12">
-
                             <input type="hidden" id="inputId" name="inputId">
                             <button type="submit" class="btn btn-primary mt-5" id="botonFormulario" name="crearProducto">Crear Producto</button>
                         </div>

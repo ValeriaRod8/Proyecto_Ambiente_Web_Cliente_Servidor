@@ -35,7 +35,7 @@ function crearProducto($pNombre, $pDetalle, $pPrecio, $pImagen)
         return $retorno;
     }
 
-    function actualizarProducto($pCodigo, $pNombre, $pDetalle, $pImagen, $pPrecio)
+    function actualizarProducto($pCodigo, $pNombre, $pDetalle, $pPrecio, $pImagen)
     {
         $retorno = false;
     
@@ -44,17 +44,17 @@ function crearProducto($pNombre, $pDetalle, $pPrecio, $pImagen)
     
             if ($oConexion) {
                 if (mysqli_set_charset($oConexion, "utf8")) {
-                    $stmt = $oConexion->prepare("UPDATE productos SET nombre = ?, detalle = ?, imagen = ?, precio = ? WHERE codigo = ?");
+                    $stmt = $oConexion->prepare("UPDATE productos SET nombre = ?, detalle = ?, precio = ?, imagen = ? WHERE codigo = ?");
                     if (!$stmt) {
                         throw new \Exception('Error al preparar la consulta de actualización del producto');
                     }
     
-                    $stmt->bind_param("ssdsi", $iNombre, $iDetalle, $iImagen, $iPrecio, $iCodigo);
+                    $stmt->bind_param("ssdsi", $iNombre, $iDetalle, $iPrecio, $iImagen, $iCodigo);
     
                     $iNombre = $pNombre;
                     $iDetalle = $pDetalle;                    
-                    $iImagen = $pImagen;
                     $iPrecio = $pPrecio;
+                    $iImagen = $pImagen;
                     $iCodigo = $pCodigo;
     
                     if ($stmt->execute()) {
