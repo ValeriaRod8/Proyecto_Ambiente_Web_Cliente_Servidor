@@ -147,4 +147,4 @@ FOREIGN KEY (codigo_producto) REFERENCES productos(codigo)) ENGINE = InnoDB;
  Descripcion text NOT NULL,
  Fecha datetime,
  Notas text
- ) ENGINE=InnoDB DEFAULT CHARSET=ucitatf8mb4 COLLATE=utf8mb4_general_ci;*/
+ ) ENGINE=InnoDB;*/
