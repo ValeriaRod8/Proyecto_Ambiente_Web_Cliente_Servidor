@@ -77,8 +77,6 @@
         }
     </style>
 </head>
-<<<<<<< HEAD
-
 <body>
     <header>
         <div class="navbar">
