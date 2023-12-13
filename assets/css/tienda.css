@@ -176,6 +176,7 @@ h1 {
     font-weight: 700;
     font-size: 5rem;
     color: var(--primary);
+    text-align: center;
 }
 
 .carrito__subtitle {

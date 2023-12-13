@@ -50,37 +50,48 @@ function eventoConfirmar() {
         method: 'POST',
         data: { carrito: JSON.stringify(listaCarrito()) },
         success: function (respuesta) {
-            console.log(respuesta);
             let respuestaJSON = JSON.parse(respuesta);
-            let carrito = respuestaJSON.carrito;
-            let montoTotal = 0;
 
-            $('.carrito__productos').empty();
-            $('.carrito__buttons').remove();
-            localStorage.clear();
+            switch (respuestaJSON.message) {
+                case 'Usuario Desconocido':
+                    window.location.href = "/Proyectos/Proyecto_Ambiente_Web_Cliente_Servidor/login.php";
+                    break;
+                case 'Exito':
+                    let carrito = respuestaJSON.carrito;
+                    let montoTotal = 0;
 
-            carrito.forEach(function (producto) {
-                montoTotal += parseFloat(producto.precio);
-                let cardProducto =
-                    $(`<div class="card-producto">
-                    <img class="card__img" src="${producto.imagen}">
-                    <h2 class="card__title mt-3">${producto.nombre}</h2>
-                    <p class="card__description">${producto.detalle}</p>
-                    <p class="card__price">$${producto.precio}</p>       
-                    </div>`);
-    
-                cardProducto.data('producto', producto);
-    
-                $(".carrito__productos").append(cardProducto);
-            });
+                    $('.carrito__productos').empty();
+                    $('.carrito__buttons').remove();
+                    localStorage.clear();
 
-            let elementoMonto = $(`<h2 class="carrito__subtitle">Monto Total: $${montoTotal.toFixed(2)}</h2>`);
+                    carrito.forEach(function (producto) {
+                        montoTotal += parseFloat(producto.precio);
+                        let cardProducto =
+                            $(`<div class="card-producto">
+                            <img class="card__img" src="${producto.imagen}">
+                            <h2 class="card__title mt-3">${producto.nombre}</h2>
+                            <p class="card__description">${producto.detalle}</p>
+                            <p class="card__price">$${producto.precio}</p>       
+                            </div>`);
 
-            $('.carrito__title').text('Compra Exitosa!');
-            $(".carrito__container").append(elementoMonto);
+                        cardProducto.data('producto', producto);
+
+                        $(".carrito__productos").append(cardProducto);
+                    });
+
+                    let elementoMonto = $(`<h2 class="carrito__subtitle">Monto Total: $${montoTotal.toFixed(2)}</h2>`);
+
+                    $('.carrito__title').text('Compra Exitosa!');
+                    $(".carrito__container").append(elementoMonto);
+                    break;
+
+                default:
+                    alert(respuestaJSON.message);
+                    break;
+            }
         },
         error: function (error) {
-            window.location.href = "/Proyectos/Proyecto_Ambiente_Web_Cliente_Servidor/login.php";
+            alert(error);
         }
     });
 }
