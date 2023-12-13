@@ -2,7 +2,7 @@
 
 require_once "conexion.php";
 
-function insertarFactura($pCodigoUsuario, $pUsername, $pCarrito)
+function insertarFactura($pIdUsuario, $pCorreo, $pCarrito)
 {
     $retorno = false;
 
@@ -11,11 +11,11 @@ function insertarFactura($pCodigoUsuario, $pUsername, $pCarrito)
 
         if (mysqli_set_charset($oConexion, "utf8")) {
             // Insertar en la tabla 'facturas'
-            $stmtFactura = $oConexion->prepare("INSERT INTO facturas (codigo_usuario, username, total) VALUES (?, ?, ?)");
-            $stmtFactura->bind_param("ssd", $iCodigoUsuario, $iUsername, $iTotal);
+            $stmtFactura = $oConexion->prepare("INSERT INTO facturas (codigo_usuario, correo, total) VALUES (?, ?, ?)");
+            $stmtFactura->bind_param("ssd", $iIdUsuario, $iCorreo, $iTotal);
 
-            $iCodigoUsuario = $pCodigoUsuario;
-            $iUsername = $pUsername;
+            $iIdUsuario = $pIdUsuario;
+            $iCorreo = $pCorreo;
             $iTotal = 0;
 
             foreach ($pCarrito as $producto) {

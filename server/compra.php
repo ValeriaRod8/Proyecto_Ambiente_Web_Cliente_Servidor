@@ -6,11 +6,11 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-if (isset($_SESSION['username'])) {
-    $codigo = $_SESSION['codigo'];
-    $username = $_SESSION['username'];
+if (isset($_SESSION['correo'])) {
+    $id = $_SESSION['id'];
+    $correo = $_SESSION['correo'];
     $carrito = json_decode($_POST['carrito'], true);
-    if (insertarFactura($codigo, $username, $carrito)) {
+    if (insertarFactura($id, $correo, $carrito)) {
         echo json_encode(array('success' => true, 'message' => 'Inserción exitosa', 'carrito' => $carrito));
     } else {
         echo json_encode(array('success' => false, 'message' => 'Error en la inserción'));

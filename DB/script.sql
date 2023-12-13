@@ -63,7 +63,7 @@ CREATE TABLE `reserva` (
   `Correo` varchar(100) NOT NULL,
   `Fecha` DATE NOT NULL,
   `Servicio` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB;
 
 CREATE TABLE `consultorio`.`productos` 
 (`codigo` INT NOT NULL AUTO_INCREMENT , 
@@ -92,7 +92,7 @@ INSERT INTO `consultorio`.`productos` (`nombre`, `detalle`, `imagen`, `precio`) 
 CREATE TABLE `consultorio`.`facturas` 
 (`codigo` INT NOT NULL AUTO_INCREMENT , 
 `codigo_usuario` INT NOT NULL ,
-`username` VARCHAR(255) NOT NULL ,
+`correo` VARCHAR(255) NOT NULL ,
 `total` DOUBLE NOT NULL ,
 `fecha_hora` DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL ,
 PRIMARY KEY (codigo) ,
