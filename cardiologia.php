@@ -116,16 +116,7 @@
         <button style="display: block; margin: 0 auto; padding: 15px 30px; font-size: 18px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" onclick="location.href='DAL/reserva.php'">Reservar</button>
     </div>
 
-<<<<<<< HEAD
-=======
-    <button style="display: block; margin: 0 auto; padding: 15px 30px; font-size: 18px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" onclick="location.href='DAL/reserva.php'">Reservar</button>
 
-    <footer class="footer" style="background-color: #fafafa; height: 260px">
-
-
-    </footer>
-
->>>>>>> 31062503e7120b1494921b593887e5800683b862
     <?php
 
     ?>
