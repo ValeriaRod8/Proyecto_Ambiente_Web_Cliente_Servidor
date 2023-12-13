@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     echo getJSON();
 }
 
-function crearConsulta($pNombre, $pTelefono, $pCorreo, $pDetalle)
+function crearUsuario($pNombre, $pCorreo, $pPassword, $pRol)
 {
     $retorno = false;
 
@@ -14,13 +14,13 @@ function crearConsulta($pNombre, $pTelefono, $pCorreo, $pDetalle)
         $oConexion = Conecta();
 
         if (mysqli_set_charset($oConexion, "utf8")) {
-            $stmt = $oConexion->prepare("insert into consultas (nombre, telefono, correo, detalle) values (?, ?, ?, ?)");
-            $stmt->bind_param("ssss", $iNombre, $iTelefono, $iCorreo, $iDetalle);
+            $stmt = $oConexion->prepare("insert into usuarios (nombre, correo, password, rol) values (?, ?, ?, ?)");
+            $stmt->bind_param("ssss", $iNombre, $iCorreo, $iPassword, $iRol);
 
             $iNombre = $pNombre;
-            $iTelefono = $pTelefono;
             $iCorreo = $pCorreo;
-            $iDetalle = $pDetalle;
+            $iPassword = $pPassword;
+            $iRol = $pRol;
 
             if ($stmt->execute()) {
                 $retorno = true;
@@ -35,7 +35,7 @@ function crearConsulta($pNombre, $pTelefono, $pCorreo, $pDetalle)
     return $retorno;
 }
 
-function actualizarConsulta($pId, $pNombre, $pTelefono, $pCorreo, $pDetalle)
+function actualizarUsuario($pId, $pNombre, $pCorreo, $pPassword, $pRol)
 {
     $retorno = false;
 
@@ -43,13 +43,13 @@ function actualizarConsulta($pId, $pNombre, $pTelefono, $pCorreo, $pDetalle)
         $oConexion = Conecta();
 
         if (mysqli_set_charset($oConexion, "utf8")) {
-            $stmt = $oConexion->prepare("UPDATE consultas SET nombre = ?, telefono = ?, correo = ?, detalle = ? WHERE id = ?");
-            $stmt->bind_param("ssssi", $iNombre, $iTelefono, $iCorreo, $iDetalle, $iId);
+            $stmt = $oConexion->prepare("UPDATE usuarios SET nombre = ?, correo = ?, password = ?, rol = ? WHERE id = ?");
+            $stmt->bind_param("ssssi", $iNombre, $iCorreo, $iPassword, $iRol, $iId);
 
             $iNombre = $pNombre;
-            $iTelefono = $pTelefono;
             $iCorreo = $pCorreo;
-            $iDetalle = $pDetalle;
+            $iPassword = $pPassword;
+            $iRol = $pRol;
             $iId = $pId;
 
             if ($stmt->execute()) {
@@ -65,7 +65,7 @@ function actualizarConsulta($pId, $pNombre, $pTelefono, $pCorreo, $pDetalle)
     return $retorno;
 }
 
-function eliminarConsulta($pId)
+function eliminarUsuario($pId)
 {
     $retorno = false;
 
@@ -73,7 +73,7 @@ function eliminarConsulta($pId)
         $oConexion = Conecta();
 
         if (mysqli_set_charset($oConexion, "utf8")) {
-            $stmt = $oConexion->prepare("delete from consultas where id = ?");
+            $stmt = $oConexion->prepare("delete from usuarios where id = ?");
             $stmt->bind_param("i", $id);
 
             $id = $pId;
@@ -93,18 +93,13 @@ function eliminarConsulta($pId)
     return $retorno;
 }
 
-function getArrayConsulta($sql)
+function getArray($sql)
 {
     try {
         $oConexion = Conecta();
-
-        //generar la consulta
         if (mysqli_set_charset($oConexion, "utf8")) {
-
-            if (!$result = mysqli_query($oConexion, $sql)) die(); //cancelamos el programa
-
+            if (!$result = mysqli_query($oConexion, $sql)) die();
             $retorno = array();
-
             while ($row = mysqli_fetch_array($result)) {
                 $retorno[] = $row;
             }
@@ -124,7 +119,7 @@ function getJSON()
 
         if (mysqli_set_charset($oConexion, "utf8")) {
 
-            if (!$result = mysqli_query($oConexion, "SELECT id, nombre, telefono, correo, detalle FROM consultas"))
+            if (!$result = mysqli_query($oConexion, "SELECT id, nombre, correo, rol FROM usuarios"))
                 die();
 
             $retorno = array();
