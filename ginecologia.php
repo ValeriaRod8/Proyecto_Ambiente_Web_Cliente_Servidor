@@ -24,11 +24,12 @@
                     </a>
                 </ul>
                 <ul>
-                    <li><a href="index.php">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                     <li><a href="nosotros.php">Nosotros</a></li>
                     <li><a class="navbar__link--activo" href="pediatria.php">Servicios</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
                     <li><a href="Citas.php">Citas</a></li>
+<<<<<<< HEAD
                     <li><a href="productos.php">Tienda</a></li>
                 </ul>
                 <ul>
@@ -61,11 +62,7 @@
     <div class="servicios-content container">
         <div class="servicios-txt">
             <h2 style="text-align: center;">Ginecología</h2>
-            <p>psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+            <p>La ginecología, rama de la medicina dedicada a la salud reproductiva de la mujer, ha experimentado notables avances que han impactado positivamente en la prevención, diagnóstico y tratamiento de diversas condiciones. Estos progresos no solo han mejorado la calidad de vida de las mujeres, sino que también han contribuido a un enfoque más integral y personalizado en la atención médica femenina.
             </p>
         </div>
     </div>
@@ -73,17 +70,13 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
-            <h2 style="text-align: left;">Equipo Medico</h2>
+            <h2 style="text-align: left;">Prevención y Detección Temprana</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-                    <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
+                    <img src="https://aisafiv.com/wp-content/uploads/2019/11/que-es-la-ginecologia-zaragoza.jpg" alt="Imagen Prevencion"height="250px" width="400px">
+                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctora Julia</p>
                 </div>
-                <p style="font-size: 16px; text-align: left;">psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+                <p style="font-size: 16px; text-align: left;">Los avances en ginecología han fortalecido las estrategias de prevención y detección temprana de enfermedades, como el cáncer de cuello uterino y de mama. Las pruebas de Papanicolaou y las mamografías, complementadas por nuevas tecnologías, permiten identificar posibles problemas de manera más eficiente, facilitando tratamientos oportunos y efectivos.
                 </p>
             </div>
         </div>
@@ -92,16 +85,13 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
+            <h2 style="text-align: left;">Empoderamiento y Educación</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-                    <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
+                    <img src="https://img.freepik.com/fotos-premium/doctor-guantes-goma-maqueta-plastico-utero-femenino-primer-plano-clinica-enfermedades-concepto-sistema-reproductor-femenino_151013-26222.jpg?size=626&ext=jpg"alt="Imagen Prevencion"height="250px" width="400px">
+                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctora Jimena A</p>
                 </div>
-                <p style="font-size: 16px; text-align: left;">psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
+                <p style="font-size: 16px; text-align: left;">Un aspecto clave de la ginecología moderna es el empoderamiento de las mujeres a través de la educación. Se promueve la conciencia sobre la anatomía y fisiología femeninas, la importancia del autoexamen y la participación activa en decisiones relacionadas con la salud ginecológica, fortaleciendo así la autonomía de las mujeres en el cuidado de su propio cuerpo.
                 </p>
             </div>
         </div>
@@ -110,25 +100,35 @@
 
     <div class="servicios-content container">
         <div class="servicios-txt">
+            <h2 style="text-align: left;">Cuidado Integral en Todas las Etapas de la Vida</h2>
             <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
                 <div style="margin-right: 20px; flex-shrink: 0;">
-                    <img src="https://institutomaternoinfantil.com/wp-content/uploads/2018/08/Dr.-Francisco-Bencosme-Pediatra-Ext.-5154-Suite-104-267x368.jpg" alt="Imagen Pediatría" style="width: 200px; height: auto;">
-                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Nombre</p>
+                    <img src="https://www.mesadelcastillo.com/wp-content/uploads/2019/10/hospital-mesa-del-castillo-ginecologia-y-fertilidad-002b.jpg" alt="Imagen Prevencion"height="360px" width="400px">
+                    <p style="text-align: left; font-size: 16px; font-weight: bold; color: black">Doctora Rosa</p>
                 </div>
-                <p style="font-size: 16px; text-align: left;">psum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incidunt consequuntur atque! Totam explicabo veritatis id quis mollitia quas qui deserunt harum, nisi ratione odit repellat eum! orem Ipsum
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur quis incident sequuntur atque took a galley
-                    of type and scrambled it to make a type specimen book. ipsum dolor sit amet consectetur adipisicing elit. Ipsa officia aspernatur!
-                </p>
+                <p style="font-size: 16px; text-align: left;">La atención ginecológica no se limita a la maternidad o a problemas específicos. En la actualidad, se promueve un enfoque integral que aborda las necesidades de las mujeres en todas las etapas de la vida. La menopausia, por ejemplo, es ahora gestionada con opciones de tratamiento personalizadas para aliviar los síntomas y mejorar la calidad de vida.
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+=======
+
+    <button style="display: block; margin: 0 auto; padding: 15px 30px; font-size: 18px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" onclick="location.href='DAL/reserva.php'">Reservar</button>
+>>>>>>> 31062503e7120b1494921b593887e5800683b862
 
     <div style="margin: 10rem;">
         <button style="display: block; margin: 0 auto; padding: 15px 30px; font-size: 18px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer;" onclick="location.href='DAL/reserva.php'">Reservar</button>
     </div>
 
+<<<<<<< HEAD
+=======
+
+    <footer class="footer" style="background-color: #fafafa; height: 260px">
+
+
+    </footer>
+
+>>>>>>> 31062503e7120b1494921b593887e5800683b862
     <?php
 
     ?>

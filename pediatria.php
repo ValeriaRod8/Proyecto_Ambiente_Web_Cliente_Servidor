@@ -23,8 +23,9 @@
                     </a>
                 </ul>
                 <ul>
-                    <li><a href="index.php">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                     <li><a href="nosotros.php">Nosotros</a></li>
+<<<<<<< HEAD
                     <li><a class="navbar__link--activo" href="pediatria.php">Servicios</a></li>
                     <li><a href="contacto.php">Contacto</a></li>
                     <li><a href="Citas.php">Citas</a></li>

@@ -77,6 +77,7 @@
         }
     </style>
 </head>
+<<<<<<< HEAD
 
 <body>
     <header>
