@@ -38,8 +38,8 @@ function mostrarReservas(reservas) {
                     <td>${reserva.servicio}</td>
                 
                     <td>
-                        <button class="btn btn-outline-warning" onclick="mostrarFormActualizar('${reserva.id}', '${reserva.nombre}', '${reserva.telefono}', '${reserva.correo}', '${reserva.fecha}', '${reserva.servicio}')">Actualizar</button>
-                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar${reserva.id}">Eliminar</button>
+                        <button class="btn btn-outline-warning btn-acciones" onclick="mostrarFormActualizar('${reserva.id}', '${reserva.nombre}', '${reserva.telefono}', '${reserva.correo}', '${reserva.fecha}', '${reserva.servicio}')">Actualizar</button>
+                        <button type="button" class="btn btn-outline-danger btn-acciones" data-bs-toggle="modal" data-bs-target="#modalEliminar${reserva.id}">Eliminar</button>
                         <div class="modal fade" id="modalEliminar${reserva.id}" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">

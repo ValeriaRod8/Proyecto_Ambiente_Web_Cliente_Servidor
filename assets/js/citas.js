@@ -41,9 +41,9 @@ function mostrarCitas(citas) {
                     <td>${cita.Fecha}</td>
                     <td>${cita.Notas}</td>
                     <td>
-                        <button class="btn btn-outline-warning" onclick="mostrarFormActualizar('${cita.Id}', '${cita.Especialista}', '${cita.CorreoEspecialista}'
+                        <button class="btn btn-outline-warning btn-acciones" onclick="mostrarFormActualizar('${cita.Id}', '${cita.Especialista}', '${cita.CorreoEspecialista}'
                         , '${cita.CorreoCliente}', '${cita.Especialidad}', '${cita.Descripcion}', '${cita.Fecha}', '${cita.Notas}')">Actualizar</button>
-                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar${cita.Id}">Eliminar</button>
+                        <button type="button" class="btn btn-outline-danger btn-acciones" data-bs-toggle="modal" data-bs-target="#modalEliminar${cita.Id}">Eliminar</button>
                         <div class="modal fade" id="modalEliminar${cita.Id}" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">

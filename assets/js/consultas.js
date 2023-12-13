@@ -36,8 +36,8 @@ function mostrarConsultas(consultas) {
                     <td>${consulta.detalle}</td>
                 
                     <td>
-                        <button class="btn btn-outline-warning" onclick="mostrarFormActualizar('${consulta.id}', '${consulta.nombre}', '${consulta.telefono}', '${consulta.correo}', '${consulta.detalle}')">Actualizar</button>
-                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar${consulta.id}">Eliminar</button>
+                        <button class="btn btn-outline-warning btn-acciones" onclick="mostrarFormActualizar('${consulta.id}', '${consulta.nombre}', '${consulta.telefono}', '${consulta.correo}', '${consulta.detalle}')">Actualizar</button>
+                        <button type="button" class="btn btn-outline-danger btn-acciones" data-bs-toggle="modal" data-bs-target="#modalEliminar${consulta.id}">Eliminar</button>
                         <div class="modal fade" id="modalEliminar${consulta.id}" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">

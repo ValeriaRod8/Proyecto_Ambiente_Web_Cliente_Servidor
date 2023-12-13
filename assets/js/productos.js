@@ -38,8 +38,8 @@ function mostrarProductos(productos) {
                     <td>${producto.precio}</td>
                 
                     <td>
-                        <button class="btn btn-outline-warning" onclick="mostrarFormActualizar('${producto.codigo}', '${producto.nombre}', '${producto.detalle}', '${producto.imagen}', '${producto.precio}')">Actualizar</button>
-                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar${producto.codigo}">Eliminar</button>
+                        <button class="btn btn-outline-warning btn-acciones" onclick="mostrarFormActualizar('${producto.codigo}', '${producto.nombre}', '${producto.detalle}', '${producto.imagen}', '${producto.precio}')">Actualizar</button>
+                        <button type="button" class="btn btn-outline-danger btn-acciones" data-bs-toggle="modal" data-bs-target="#modalEliminar${producto.codigo}">Eliminar</button>
                         <div class="modal fade" id="modalEliminar${producto.codigo}" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
