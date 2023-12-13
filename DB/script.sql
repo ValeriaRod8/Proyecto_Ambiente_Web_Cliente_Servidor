@@ -80,6 +80,15 @@ INSERT INTO `consultorio`.`productos` (`nombre`, `detalle`, `imagen`, `precio`) 
 ('Paracetamol', 'Analgesico', 'https://paracetamol.bayer.com.ar/sites/g/files/vrxlpx30376/files/2022-10/PACK%20PARACETAMOL%20BAYER.png?imwidth=5000', 7.99),
 ('Antigripal', 'Tratamiento de la gripe', 'https://walmartcr.vtexassets.com/arquivos/ids/354891/Antigripal-Chinoin-Antifludes-M-s-12-Tabletas-1-27079.jpg?v=638019853163870000', 9.99);
 
+
+INSERT INTO `consultorio`.`productos` (`nombre`, `detalle`, `imagen`, `precio`) VALUES 
+('Termometro', 'Medir temperatura corporal', 'https://maccglobalservice.com/wp-content/uploads/2021/03/4-5.png', 19.99),
+('Silla de Ruedas', 'Movilizacion', 'https://www.unimart.com/cdn/shop/products/WC001US_Silla_de_Ruedas_18_con_Apoya_Brazos_Fijos_Rueda.png?v=1679331184', 69.99),
+('Balanza', 'Instrumento de pesaje', 'https://goltech.net/wp-content/uploads/2022/12/balanza-medica-KERN-01.jpg', 69.99),
+('Guantes', 'Equipo de proteccion personal', 'https://www.mayordent.cl/wp-content/uploads/2020/03/nitrilo-con.jpg', 5.99),
+('Salbutamol', 'Inhalador', 'https://farmaprime.com.co/wp-content/uploads/2023/01/7500435158749-2.jpg', 9.99),
+('Aspirina', 'Medicamento para el dolor', 'https://s1.eestatic.com/2018/06/08/ciencia/salud/farmacologia-farmacologia_clinica-salud_313481328_81018046_1706x960.jpg', 11.99);
+
 CREATE TABLE `consultorio`.`facturas` 
 (`codigo` INT NOT NULL AUTO_INCREMENT , 
 `codigo_usuario` INT NOT NULL ,

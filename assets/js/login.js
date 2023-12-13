@@ -24,3 +24,44 @@ function loginFormulario() {
         }
     });
 }
+
+function login() {
+    // Obtener valores de usuario y contraseña
+    let username = $('#username').val();
+    let password = $('#password').val();
+    console.log(username);
+    // Objeto de datos a enviar al servidor
+    let data = {
+        username: username,
+        password: password
+    };
+    
+    console.log(data);
+    $.ajax({
+        type: 'POST',
+        url: 'server/login.php',
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        success: function (respuesta) {
+            loginRespuesta(respuesta);
+        },
+        error: function (error) {
+            console.error('Error en la solicitud AJAX:', error);
+        }
+    });
+}
+
+function loginRespuesta(respuesta) {
+    if (respuesta.success) {
+        window.location.href = 'productos.html';
+    } else {
+        let contenedorLogin = $('.container-login');
+        if ($('.form-login-error').length === 0) {
+            let mensajeError = $('<h2 class="form-login-error mt-5"></h2>').text(respuesta.message);
+            contenedorLogin.append(mensajeError);
+        } else {
+            $('.form-login-error').text(respuesta.message);
+            $('.form-login-error').show();
+        }
+    }
+}
